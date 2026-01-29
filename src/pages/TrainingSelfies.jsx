@@ -17,6 +17,18 @@ export default function TrainingSelfies() {
         if (user) fetchSelfies()
     }, [user])
 
+    // Prevenir scroll del body cuando el modal está abierto
+    useEffect(() => {
+        if (showUploadModal) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+        return () => {
+            document.body.style.overflow = 'unset'
+        }
+    }, [showUploadModal])
+
     const fetchSelfies = async () => {
         try {
             setLoading(true)
@@ -102,48 +114,49 @@ export default function TrainingSelfies() {
     }
 
     return (
-        <div className="max-w-6xl mx-auto p-4 pb-24 animate-fade-up space-y-10">
+        <div className="max-w-6xl mx-auto p-3 sm:p-4 pb-16 sm:pb-24 animate-fade-up space-y-8 sm:space-y-10">
             {/* Header Revolucionario */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
                 <div>
-                    <h1 className="text-5xl font-black text-white italic tracking-tighter uppercase mb-2">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white italic tracking-tighter uppercase mb-2">
                         MIS <span className="text-indigo-500">PROGRESOS</span>
                     </h1>
                 </div>
                 <button
                     onClick={() => setShowUploadModal(true)}
-                    className="group relative flex items-center gap-3 bg-white text-black px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-indigo-500 hover:text-white transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] active:scale-95"
+                    className="group relative flex items-center gap-2 sm:gap-3 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black uppercase text-xs sm:text-sm tracking-widest hover:bg-indigo-500 hover:text-white transition-all shadow-[0_0_30px_rgba(255,255,255,0.1)] active:scale-95"
                 >
-                    <Camera size={18} className="group-hover:rotate-12 transition-transform" />
-                    Capturar Progreso
+                    <Camera size={16} className="sm:w-[18px] sm:h-[18px] group-hover:rotate-12 transition-transform" />
+                    <span className="hidden sm:inline">Capturar Progreso</span>
+                    <span className="sm:hidden">Nueva Foto</span>
                 </button>
             </div>
 
             {loading ? (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                     {[1, 2, 3].map(i => (
-                        <div key={i} className="aspect-[3/4] bg-zinc-900/40 rounded-[2.5rem] animate-pulse border border-white/5"></div>
+                        <div key={i} className="aspect-[3/4] bg-zinc-900/40 rounded-2xl sm:rounded-[2.5rem] animate-pulse border border-white/5"></div>
                     ))}
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {selfies.length === 0 && (
-                        <div className="col-span-full py-32 text-center bg-zinc-950/40 rounded-[3rem] border border-dashed border-zinc-800">
-                            <History size={48} className="mx-auto mb-6 text-zinc-700 opacity-20" />
-                            <p className="text-zinc-500 font-mono text-xs uppercase tracking-[0.4em]">Sin registros visuales detectados</p>
+                        <div className="col-span-full py-20 sm:py-32 text-center bg-zinc-950/40 rounded-2xl sm:rounded-[3rem] border border-dashed border-zinc-800">
+                            <History size={40} className="sm:w-12 sm:h-12 mx-auto mb-4 sm:mb-6 text-zinc-700 opacity-20" />
+                            <p className="text-zinc-500 font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em]">Sin registros visuales detectados</p>
                         </div>
                     )}
 
                     {selfies.map((selfie) => (
-                        <div key={selfie.id} className="group bg-zinc-900/40 rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-indigo-500/40 transition-all duration-500 shadow-2xl flex flex-col">
+                        <div key={selfie.id} className="group bg-zinc-900/40 rounded-2xl sm:rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-indigo-500/40 transition-all duration-500 shadow-2xl flex flex-col">
                             {/* Imagen Container (Relative para el botón de borrar) */}
                             <div className="relative aspect-[4/5] bg-black/40 flex items-center justify-center overflow-hidden">
                                 {/* Acciones */}
                                 <button
                                     onClick={() => setDeleteModal({ isOpen: true, id: selfie.id, imageUrl: selfie.image_url })}
-                                    className="absolute top-5 right-5 z-50 p-3 bg-black/60 backdrop-blur-md text-zinc-500 hover:text-red-500 rounded-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all"
+                                    className="absolute top-3 right-3 sm:top-5 sm:right-5 z-50 p-2 sm:p-3 bg-black/60 backdrop-blur-md text-zinc-500 hover:text-red-500 rounded-xl sm:rounded-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all"
                                 >
-                                    <Trash2 size={16} />
+                                    <Trash2 size={14} className="sm:w-4 sm:h-4" />
                                 </button>
 
                                 {/* Fondo de desenfoque revolucionario */}
@@ -160,11 +173,11 @@ export default function TrainingSelfies() {
                             </div>
 
                             {/* Descripción y Fecha (Abajo de la foto) */}
-                            <div className="p-6 space-y-2">
-                                <p className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em]">
+                            <div className="p-4 sm:p-6 space-y-2">
+                                <p className="text-[9px] sm:text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em]">
                                     {new Date(selfie.created_at).toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })}
                                 </p>
-                                <p className="text-zinc-200 font-medium text-sm leading-relaxed">
+                                <p className="text-zinc-200 font-medium text-xs sm:text-sm leading-relaxed">
                                     {selfie.description || 'Sin descripción'}
                                 </p>
                             </div>
@@ -175,28 +188,38 @@ export default function TrainingSelfies() {
 
             {/* Modal de Subida */}
             {showUploadModal && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-in fade-in duration-300">
-                    <div className="bg-zinc-900 border border-white/10 rounded-[3rem] p-8 w-full max-w-lg relative overflow-hidden">
+                <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-0 sm:p-4 bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 overflow-y-auto">
+                    <div className="bg-zinc-900 border-0 sm:border border-white/10 rounded-none sm:rounded-[3rem] p-6 sm:p-8 w-full sm:max-w-lg relative overflow-hidden min-h-screen sm:min-h-0 my-0 sm:my-auto">
                         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
 
-                        <div className="flex justify-between items-center mb-8">
-                            <h2 className="text-2xl font-black text-white uppercase italic italic tracking-tighter">Nueva Captura</h2>
-                            <button onClick={() => setShowUploadModal(false)} className="text-zinc-500 hover:text-white"><X size={24} /></button>
+                        <div className="flex justify-between items-center mb-6 sm:mb-8 sticky top-0 bg-zinc-900 z-10 py-4 sm:py-0 sm:static">
+                            <h2 className="text-xl sm:text-2xl font-black text-white uppercase italic tracking-tighter">Nueva Captura</h2>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setShowUploadModal(false)
+                                    setNewSelfie({ description: '', file: null, preview: null })
+                                }}
+                                className="text-zinc-500 hover:text-white p-2"
+                            >
+                                <X size={24} />
+                            </button>
                         </div>
 
                         <form onSubmit={uploadSelfie} className="space-y-6">
-                            <div className="relative aspect-video bg-black/40 rounded-3xl border border-white/5 overflow-hidden group cursor-pointer">
+                            <div className="relative aspect-video bg-black/40 rounded-2xl sm:rounded-3xl border border-white/5 overflow-hidden group cursor-pointer">
                                 {newSelfie.preview ? (
                                     <img src={newSelfie.preview} className="w-full h-full object-contain" alt="Preview" />
                                 ) : (
                                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-zinc-600">
-                                        <Plus size={32} />
-                                        <p className="text-[10px] font-black uppercase tracking-widest">Seleccionar Archivo</p>
+                                        <Camera size={32} />
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-center px-4">Tomar Foto o Seleccionar</p>
                                     </div>
                                 )}
                                 <input
                                     type="file"
                                     accept="image/*"
+                                    capture="environment"
                                     onChange={handleFileChange}
                                     className="absolute inset-0 opacity-0 cursor-pointer"
                                 />
