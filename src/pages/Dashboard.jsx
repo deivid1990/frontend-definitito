@@ -153,31 +153,33 @@ export default function Dashboard() {
                             <span className="text-[8px] sm:text-[9px] font-black text-zinc-500 uppercase tracking-tighter">Tendencia Neural</span>
                         </div>
                     </div>
-                    <div className="h-[200px] sm:h-[250px] lg:h-[300px] w-full mt-4 bg-zinc-950/20 rounded-2xl sm:rounded-3xl p-2 sm:p-4 flex items-center justify-center">
-                        <ResponsiveContainer width="99%" height="100%" minWidth={0}>
-                            <AreaChart data={stats.constancyScore} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-                                <defs>
-                                    <linearGradient id="colorConstancy" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                                        <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
-                                    </linearGradient>
-                                </defs>
-                                <Tooltip
-                                    contentStyle={{ backgroundColor: '#09090b', border: '1px solid #27272a', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
-                                    itemStyle={{ color: '#10b981', fontSize: '10px', fontWeight: 'black', textTransform: 'uppercase' }}
-                                    labelStyle={{ color: '#52525b', fontSize: '9px', fontWeight: 'bold' }}
-                                />
-                                <Area
-                                    type="monotone"
-                                    dataKey="score"
-                                    stroke="#10b981"
-                                    strokeWidth={4}
-                                    fillOpacity={1}
-                                    fill="url(#colorConstancy)"
-                                    animationDuration={2000}
-                                />
-                            </AreaChart>
-                        </ResponsiveContainer>
+                    <div className="mt-4 bg-zinc-950/20 rounded-2xl sm:rounded-3xl relative overflow-hidden h-[250px] sm:h-[300px] lg:h-[350px]">
+                        <div className="absolute inset-0 p-2 sm:p-6">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <AreaChart data={stats.constancyScore} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                    <defs>
+                                        <linearGradient id="colorConstancy" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                                            <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                                        </linearGradient>
+                                    </defs>
+                                    <Tooltip
+                                        contentStyle={{ backgroundColor: '#09090b', border: '1px solid #27272a', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
+                                        itemStyle={{ color: '#10b981', fontSize: '10px', fontWeight: 'black', textTransform: 'uppercase' }}
+                                        labelStyle={{ color: '#52525b', fontSize: '9px', fontWeight: 'bold' }}
+                                    />
+                                    <Area
+                                        type="monotone"
+                                        dataKey="score"
+                                        stroke="#10b981"
+                                        strokeWidth={4}
+                                        fillOpacity={1}
+                                        fill="url(#colorConstancy)"
+                                        animationDuration={1500}
+                                    />
+                                </AreaChart>
+                            </ResponsiveContainer>
+                        </div>
                     </div>
                 </div>
             </div>

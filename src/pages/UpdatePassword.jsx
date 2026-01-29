@@ -12,12 +12,20 @@ export default function UpdatePassword() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        // Verificar si existe una sesión (Supabase la establece automáticamente al venir del email)
+        // Supabase procesa el hash de la URL (access_token) automáticamente.
+        // Esperamos un momento para que el cliente se sincronice.
         const checkSession = async () => {
-            const { data: { session } } = await supabase.auth.getSession()
-            if (!session) {
-                setError('No se detectó una sesión de recuperación válida. Por favor, solicita un nuevo enlace.')
+            // Intentar obtener sesión varias veces si es necesario (el procesamiento del hash puede tardar ms)
+            for (let i = 0; i < 5; i++) {
+                const { data: { session } } = await supabase.auth.getSession()
+                if (session) {
+                    setIsValidating(false)
+                    return
+                }
+                await new Promise(r => setTimeout(r, 500))
             }
+
+            setError('No se detectó una sesión de recuperación válida. Por favor, asegúrate de abrir el enlace desde el mismo navegador o solicita uno nuevo.')
             setIsValidating(false)
         }
         checkSession()
