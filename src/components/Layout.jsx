@@ -21,22 +21,22 @@ export default function Layout() {
     return (
         <div className="flex h-screen bg-deep-space text-white overflow-hidden font-sans selection:bg-neon-blue selection:text-black">
             {/* Sidebar / Menú Lateral Premium */}
-            <aside className="w-80 bg-black/40 border-r border-white/5 p-8 flex flex-col hidden md:flex backdrop-blur-2xl relative z-20">
+            <aside className="w-64 lg:w-80 bg-black/40 border-r border-white/5 p-4 lg:p-8 flex flex-col hidden md:flex backdrop-blur-2xl relative z-20">
                 {/* Decorative Laser Line */}
                 <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent"></div>
 
-                <Link to="/dashboard" className="mb-14 flex items-center gap-5 px-2 group/logo hover:opacity-80 transition-opacity">
+                <Link to="/dashboard" className="mb-8 lg:mb-14 flex items-center gap-3 lg:gap-5 px-2 group/logo hover:opacity-80 transition-opacity">
                     <div className="relative">
                         <div className="absolute -inset-1 bg-indigo-500 rounded-lg blur opacity-30 animate-pulse-slow"></div>
-                        <div className="relative p-3.5 bg-black rounded-xl border border-indigo-500/30 shadow-[inset_0_0_10px_rgba(79,70,229,0.2)]">
-                            <Activity size={32} className="text-indigo-400" />
+                        <div className="relative p-2.5 lg:p-3.5 bg-black rounded-xl border border-indigo-500/30 shadow-[inset_0_0_10px_rgba(79,70,229,0.2)]">
+                            <Activity size={24} className="lg:w-8 lg:h-8 text-indigo-400" />
                         </div>
                     </div>
                     <div>
-                        <h1 className="text-3xl font-black italic tracking-tighter text-white uppercase leading-none">
+                        <h1 className="text-xl lg:text-3xl font-black italic tracking-tighter text-white uppercase leading-none">
                             GYM<span className="text-indigo-500">AI</span> COACH
                         </h1>
-                        <p className="text-[10px] text-zinc-500 font-mono tracking-[0.2em] uppercase mt-1">EL ENTRENAMIENTO DEL FUTURO</p>
+                        <p className="text-[8px] lg:text-[10px] text-zinc-500 font-mono tracking-[0.2em] uppercase mt-1 hidden lg:block">EL ENTRENAMIENTO DEL FUTURO</p>
                     </div>
                 </Link>
 
@@ -47,14 +47,14 @@ export default function Layout() {
                             <Link
                                 key={item.path}
                                 to={item.path}
-                                className={`flex items-center gap-4 px-5 py-4.5 rounded-xl transition-all duration-500 group relative overflow-hidden ${isActive
+                                className={`flex items-center gap-3 lg:gap-4 px-3 lg:px-5 py-3 lg:py-4.5 rounded-xl transition-all duration-500 group relative overflow-hidden ${isActive
                                     ? 'bg-indigo-600/10 text-white border border-indigo-500/20 text-shadow-neon'
                                     : 'text-zinc-500 hover:text-zinc-200 hover:bg-white/5'
                                     }`}
                             >
                                 {isActive && <div className="absolute left-0 top-1/2 -translate-y-1/2 h-10 w-[3px] bg-indigo-500 shadow-[0_0_15px_#6366f1]"></div>}
-                                <item.icon size={26} className={`transition-all duration-500 ${isActive ? 'text-indigo-400 scale-110' : 'group-hover:text-indigo-400'}`} />
-                                <span className={`text-lg tracking-wide transition-all ${isActive ? 'font-black uppercase italic' : 'font-medium'}`}>{item.label}</span>
+                                <item.icon size={20} className={`lg:w-[26px] lg:h-[26px] transition-all duration-500 ${isActive ? 'text-indigo-400 scale-110' : 'group-hover:text-indigo-400'}`} />
+                                <span className={`text-sm lg:text-lg tracking-wide transition-all ${isActive ? 'font-black uppercase italic' : 'font-medium'}`}>{item.label}</span>
                             </Link>
                         )
                     })}
@@ -126,7 +126,7 @@ export default function Layout() {
             )}
 
             {/* Contenido Principal con Iluminación Ambiental */}
-            <main className="flex-1 p-8 pt-24 md:pt-8 overflow-y-auto relative bg-[#050510]">
+            <main className="flex-1 p-4 sm:p-6 lg:p-8 pt-20 md:pt-8 overflow-y-auto relative bg-[#050510]">
                 {/* Background Tech Overlays */}
                 <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none z-0"></div>
                 <div className="fixed inset-0 bg-cyber-grid opacity-[0.05] pointer-events-none z-0"></div>

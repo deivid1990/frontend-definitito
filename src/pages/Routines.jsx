@@ -65,14 +65,14 @@ export default function Routines() {
     }, [])
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 sm:mb-8 gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold text-white mb-2">Mis Rutinas</h1>
-                    <p className="text-slate-400">Gestiona y organiza tu entrenamiento semanal.</p>
+                    <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Mis Rutinas</h1>
+                    <p className="text-slate-400 text-sm sm:text-base">Gestiona y organiza tu entrenamiento semanal.</p>
                 </div>
-                <Link to="/coach" className="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-lg shadow-indigo-500/20 transition-all font-medium active:scale-95">
-                    <Plus size={20} /> <span className="hidden sm:inline">Nueva Rutina (IA)</span><span className="sm:hidden">Crear</span>
+                <Link to="/coach" className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl flex items-center gap-2 shadow-lg shadow-indigo-500/20 transition-all font-medium active:scale-95 text-sm sm:text-base">
+                    <Plus size={18} className="sm:w-5 sm:h-5" /> <span className="hidden sm:inline">Nueva Rutina (IA)</span><span className="sm:hidden">Crear</span>
                 </Link>
             </div>
 
@@ -105,41 +105,41 @@ export default function Routines() {
                     )}
 
                     {routines.map(routine => (
-                        <div key={routine.id} className="bg-zinc-900/40 backdrop-blur-md border border-white/5 rounded-[2.5rem] p-8 hover:border-indigo-500/40 hover:bg-zinc-900/60 transition-all duration-500 shadow-2xl group animate-fade-up">
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                                <div className="flex items-start gap-6">
-                                    <div className="h-16 w-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex flex-col items-center justify-center text-white font-black shadow-lg shadow-indigo-900/40 shrink-0 group-hover:scale-110 transition-transform duration-500">
-                                        <span className="text-2xl leading-none">{routine.days_per_week}</span>
-                                        <span className="text-[8px] uppercase tracking-[0.2em] opacity-70">Días</span>
+                        <div key={routine.id} className="bg-zinc-900/40 backdrop-blur-md border border-white/5 rounded-2xl sm:rounded-[2.5rem] p-4 sm:p-6 lg:p-8 hover:border-indigo-500/40 hover:bg-zinc-900/60 transition-all duration-500 shadow-2xl group animate-fade-up">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-8">
+                                <div className="flex items-start gap-4 sm:gap-6">
+                                    <div className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl sm:rounded-2xl flex flex-col items-center justify-center text-white font-black shadow-lg shadow-indigo-900/40 shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                        <span className="text-xl sm:text-2xl leading-none">{routine.days_per_week}</span>
+                                        <span className="text-[7px] sm:text-[8px] uppercase tracking-[0.2em] opacity-70">Días</span>
                                     </div>
                                     <div>
-                                        <span className="text-sm font-black text-white italic tracking-tighter uppercase">{routine.name}</span>
-                                        <p className="text-zinc-500 text-sm flex flex-wrap items-center gap-3 mt-2 font-mono">
-                                            <span className="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full uppercase tracking-widest border border-indigo-500/20">{routine.goal || 'General'}</span>
-                                            <span className="opacity-30">|</span>
-                                            <span className="uppercase tracking-widest">ACTUALIZADA: {new Date(routine.updated_at || routine.created_at).toLocaleDateString('es-ES')}</span>
+                                        <span className="text-sm sm:text-base font-black text-white italic tracking-tighter uppercase">{routine.name}</span>
+                                        <p className="text-zinc-500 text-xs sm:text-sm flex flex-wrap items-center gap-2 sm:gap-3 mt-2 font-mono">
+                                            <span className="bg-indigo-500/10 text-indigo-400 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full uppercase tracking-widest border border-indigo-500/20 text-[10px] sm:text-xs">{routine.goal || 'General'}</span>
+                                            <span className="opacity-30 hidden sm:inline">|</span>
+                                            <span className="uppercase tracking-widest text-[10px] sm:text-xs">ACTUALIZADA: {new Date(routine.updated_at || routine.created_at).toLocaleDateString('es-ES')}</span>
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-center gap-4 self-end md:self-auto">
+                                <div className="flex items-center gap-3 sm:gap-4 self-end md:self-auto">
                                     <button
                                         onClick={() => setDeleteModal({ isOpen: true, id: routine.id })}
-                                        className="p-3 rounded-xl bg-zinc-800 text-zinc-500 hover:text-red-400 hover:bg-red-900/20 transition-all duration-300 active:scale-90"
+                                        className="p-2 sm:p-3 rounded-xl bg-zinc-800 text-zinc-500 hover:text-red-400 hover:bg-red-900/20 transition-all duration-300 active:scale-90"
                                     >
-                                        <Trash2 size={20} />
+                                        <Trash2 size={18} className="sm:w-5 sm:h-5" />
                                     </button>
-                                    <Link to={`/entrenar/${routine.id}`} className="px-8 py-4 rounded-2xl bg-white text-black hover:bg-indigo-500 hover:text-white font-black text-xs uppercase tracking-widest transition-all duration-500 shadow-xl hover:shadow-indigo-500/20 active:scale-95 flex items-center gap-3">
-                                        <PlayCircle size={20} /> ACCEDER AL SISTEMA
+                                    <Link to={`/entrenar/${routine.id}`} className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white text-black hover:bg-indigo-500 hover:text-white font-black text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-500 shadow-xl hover:shadow-indigo-500/20 active:scale-95 flex items-center gap-2 sm:gap-3">
+                                        <PlayCircle size={16} className="sm:w-5 sm:h-5" /> <span className="hidden sm:inline">ACCEDER AL SISTEMA</span><span className="sm:hidden">ENTRENAR</span>
                                     </Link>
                                 </div>
                             </div>
 
                             {routine.routine_days && (
-                                <div className="mt-10 space-y-4">
-                                    <div className="flex items-center justify-between px-2 mb-6">
-                                        <h4 className="text-xs text-zinc-500 font-black uppercase tracking-[0.4em]">Programación Semanal</h4>
-                                        <div className="h-px flex-1 bg-white/5 mx-6"></div>
+                                <div className="mt-6 sm:mt-8 lg:mt-10 space-y-4">
+                                    <div className="flex items-center justify-between px-2 mb-4 sm:mb-6">
+                                        <h4 className="text-[10px] sm:text-xs text-zinc-500 font-black uppercase tracking-[0.3em] sm:tracking-[0.4em]">Programación Semanal</h4>
+                                        <div className="h-px flex-1 bg-white/5 mx-4 sm:mx-6"></div>
                                     </div>
 
                                     <div className="space-y-3">
@@ -160,22 +160,22 @@ export default function Routines() {
                                                     <Link
                                                         key={dayNum}
                                                         to={`/entrenar/${routine.id}/${dayNum}`}
-                                                        className="flex items-center justify-between bg-black/40 border border-white/5 p-6 rounded-[2rem] hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all group/day cursor-pointer relative overflow-hidden"
+                                                        className="flex items-center justify-between bg-black/40 border border-white/5 p-4 sm:p-6 rounded-xl sm:rounded-[2rem] hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all group/day cursor-pointer relative overflow-hidden"
                                                     >
                                                         <div className="absolute left-0 top-0 w-1 h-full bg-indigo-600"></div>
-                                                        <div className="flex items-center gap-6">
-                                                            <div className="text-left min-w-[120px]">
-                                                                <p className="text-xs text-indigo-400 font-black tracking-widest">{dayNames[dayNum]}</p>
-                                                                <span className="text-white font-black italic uppercase tracking-tighter text-2xl leading-none">Misión {dayNum}</span>
+                                                        <div className="flex items-center gap-3 sm:gap-6 flex-1">
+                                                            <div className="text-left min-w-[80px] sm:min-w-[120px]">
+                                                                <p className="text-[10px] sm:text-xs text-indigo-400 font-black tracking-widest">{dayNames[dayNum]}</p>
+                                                                <span className="text-white font-black italic uppercase tracking-tighter text-lg sm:text-2xl leading-none">Misión {dayNum}</span>
                                                             </div>
-                                                            <div className="h-8 w-px bg-white/5"></div>
-                                                            <div>
-                                                                <p className="text-lg text-zinc-300 font-bold uppercase tracking-tight">{dayData.name}</p>
+                                                            <div className="h-6 sm:h-8 w-px bg-white/5"></div>
+                                                            <div className="flex-1">
+                                                                <p className="text-base sm:text-lg text-zinc-300 font-bold uppercase tracking-tight">{dayData.name}</p>
                                                                 <div className="flex gap-2 mt-1">
                                                                     {lastSession ? (
                                                                         renderStars(lastSession.rating)
                                                                     ) : (
-                                                                        <span className="text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-full font-black uppercase tracking-widest">Activo</span>
+                                                                        <span className="text-[9px] sm:text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-full font-black uppercase tracking-widest">Activo</span>
                                                                     )}
                                                                 </div>
                                                             </div>
@@ -183,10 +183,10 @@ export default function Routines() {
                                                         <div className="flex items-center gap-4">
                                                             {lastSession ? (
                                                                 <div className="bg-emerald-500/20 p-2 rounded-lg border border-emerald-500/30">
-                                                                    <CheckCircle size={20} className="text-emerald-500" />
+                                                                    <CheckCircle size={18} className="sm:w-5 sm:h-5 text-emerald-500" />
                                                                 </div>
                                                             ) : (
-                                                                <PlayCircle size={24} className="text-indigo-500 group-hover/day:scale-110 transition-transform" />
+                                                                <PlayCircle size={20} className="sm:w-6 sm:h-6 text-indigo-500 group-hover/day:scale-110 transition-transform" />
                                                             )}
                                                         </div>
                                                     </Link>

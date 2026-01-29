@@ -55,20 +55,20 @@ export default function Login() {
             <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
             <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
 
-            <div className="relative z-10 w-full max-w-md">
+            <div className="relative z-10 w-full max-w-md px-4">
                 {/* Logo y Encabezado */}
-                <div className="text-center mb-10 group">
-                    <div className="inline-flex justify-center items-center p-5 bg-black/50 border border-cyan-500/30 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.2)] mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-md">
-                        <Zap className="text-cyan-400 h-12 w-12 drop-shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
+                <div className="text-center mb-8 sm:mb-10 group">
+                    <div className="inline-flex justify-center items-center p-4 sm:p-5 bg-black/50 border border-cyan-500/30 rounded-xl sm:rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.2)] mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-md">
+                        <Zap className="text-cyan-400 h-10 w-10 sm:h-12 sm:w-12 drop-shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
                     </div>
-                    <h1 className="text-5xl font-black text-white mb-2 tracking-tighter italic">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2 tracking-tighter italic">
                         GYM<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">AI</span> COACH
                     </h1>
-                    <p className="text-slate-400 text-sm font-mono tracking-widest uppercase">Sistema de Entrenamiento V2.0</p>
+                    <p className="text-slate-400 text-xs sm:text-sm font-mono tracking-widest uppercase">Sistema de Entrenamiento V2.0</p>
                 </div>
 
                 {/* Tarjeta de Formulario */}
-                <div className="bg-zinc-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/10 relative overflow-hidden">
+                <div className="bg-zinc-900/80 backdrop-blur-xl p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-white/10 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
 
                     {error && (
