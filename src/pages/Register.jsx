@@ -21,26 +21,13 @@ export default function Register() {
         setError(null)
 
         try {
-            const { data, error: authError } = await signUp(email, password)
+            const { data, error: authError } = await signUp(email, password, { full_name: fullName })
 
             if (authError) throw authError
 
             if (data?.user) {
-                // Crear perfil inicial
-                const { error: profileError } = await supabase
-                    .from('profiles')
-                    .insert([{
-                        id: data.user.id,
-                        full_name: fullName,
-                        fitness_level: 'Principiante',
-                        goal: 'Salud',
-                        height: 0,
-                        weight: 0
-                    }])
-
-                if (profileError) console.error('Error perfil:', profileError)
-
-                // En lugar de navegar, mostramos el éxito si Supabase requiere confirmación
+                // El perfil se creará automáticamente en el AuthContext 
+                // una vez el usuario confirme su correo e inicie sesión (evitamos el 401).
                 setIsSubmitted(true)
             }
 

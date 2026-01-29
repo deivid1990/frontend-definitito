@@ -42,7 +42,7 @@ export default function Login() {
         <div className="min-h-screen bg-zinc-950 relative flex items-center justify-center p-4 overflow-hidden">
             {/* Background Image Layer */}
             <img
-                src="/C:/Users/david/.gemini/antigravity/brain/532fc4f2-147b-4305-be2a-8335abf4f387/futuristic_gym_interior_1769365562331.png"
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
                 className="absolute inset-0 w-full h-full object-cover opacity-20 scale-110 blur-sm"
                 alt="Gym Background"
             />

@@ -10,11 +10,29 @@ export const AuthProvider = ({ children }) => {
     const [session, setSession] = useState(null)
     const [loading, setLoading] = useState(true)
 
+    const ensureProfileExists = async (user) => {
+        const { data, error } = await supabase
+            .from('profiles')
+            .select('id')
+            .eq('id', user.id)
+            .single()
+
+        if (error && error.code === 'PGRST116') { // No se encontró el perfil
+            await supabase.from('profiles').insert([{
+                id: user.id,
+                full_name: user.user_metadata?.full_name || user.email.split('@')[0],
+                fitness_level: 'Principiante',
+                goal: 'Salud'
+            }])
+        }
+    }
+
     useEffect(() => {
         // 1. Revisar sesión al cargar
         supabase.auth.getSession().then(({ data: { session } }) => {
             setSession(session)
             setUser(session?.user ?? null)
+            if (session?.user) ensureProfileExists(session.user)
             setLoading(false)
         })
 
@@ -22,6 +40,7 @@ export const AuthProvider = ({ children }) => {
         const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
             setSession(session)
             setUser(session?.user ?? null)
+            if (session?.user) ensureProfileExists(session.user)
             setLoading(false)
         })
 
@@ -29,7 +48,11 @@ export const AuthProvider = ({ children }) => {
     }, [])
 
     const value = {
-        signUp: (email, password) => supabase.auth.signUp({ email, password }),
+        signUp: (email, password, metadata = {}) => supabase.auth.signUp({
+            email,
+            password,
+            options: { data: metadata }
+        }),
         signIn: (email, password) => supabase.auth.signInWithPassword({ email, password }),
         signOut: () => supabase.auth.signOut(),
         resetPassword: (email) => supabase.auth.resetPasswordForEmail(email, {
