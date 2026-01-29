@@ -9,6 +9,8 @@ export default function Register() {
     const [password, setPassword] = useState('')
     const [fullName, setFullName] = useState('')
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState(null)
 
     const { signUp } = useAuth()
     const navigate = useNavigate()
