@@ -114,7 +114,7 @@ export default function TrainingSelfies() {
     }
 
     return (
-        <div className="max-w-6xl mx-auto p-3 sm:p-4 pb-16 sm:pb-24 animate-fade-up space-y-8 sm:space-y-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 animate-fade-up space-y-8 sm:space-y-10">
             {/* Header Revolucionario */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
                 <div>

@@ -15,6 +15,12 @@ vi.mock('../lib/supabaseClient', () => ({
             resetPasswordForEmail: vi.fn(),
             updateUser: vi.fn(),
         },
+        from: vi.fn(() => ({
+            select: vi.fn().mockReturnThis(),
+            eq: vi.fn().mockReturnThis(),
+            single: vi.fn().mockResolvedValue({ data: { id: '123' }, error: null }),
+            insert: vi.fn().mockResolvedValue({ error: null })
+        }))
     },
 }))
 

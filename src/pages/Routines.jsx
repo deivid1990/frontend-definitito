@@ -65,7 +65,7 @@ export default function Routines() {
     }, [])
 
     return (
-        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 sm:mb-8 gap-4">
                 <div>
                     <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Mis Rutinas</h1>

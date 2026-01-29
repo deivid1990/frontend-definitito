@@ -11,19 +11,23 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     const ensureProfileExists = async (user) => {
-        const { data, error } = await supabase
-            .from('profiles')
-            .select('id')
-            .eq('id', user.id)
-            .single()
+        try {
+            const { data, error } = await supabase
+                .from('profiles')
+                .select('id')
+                .eq('id', user.id)
+                .single()
 
-        if (error && error.code === 'PGRST116') { // No se encontró el perfil
-            await supabase.from('profiles').insert([{
-                id: user.id,
-                full_name: user.user_metadata?.full_name || user.email.split('@')[0],
-                fitness_level: 'Principiante',
-                goal: 'Salud'
-            }])
+            if (error && error.code === 'PGRST116') { // No se encontró el perfil
+                await supabase.from('profiles').insert([{
+                    id: user.id,
+                    full_name: user.user_metadata?.full_name || user.email.split('@')[0],
+                    fitness_level: 'Principiante',
+                    goal: 'Salud'
+                }])
+            }
+        } catch (err) {
+            console.error('Error al asegurar perfil:', err)
         }
     }
 

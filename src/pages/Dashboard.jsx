@@ -90,7 +90,7 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8 lg:space-y-10 p-2 sm:p-4 pb-12 sm:pb-20 animate-fade-up">
+        <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8 lg:space-y-10 p-4 sm:p-6 pb-12 sm:pb-20 animate-fade-up">
             {/* Hero Section Premium */}
             <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 rounded-2xl sm:rounded-[3rem] overflow-hidden mb-6 sm:mb-12 border border-white/10 group shadow-2xl">
                 <img
@@ -99,11 +99,11 @@ export default function Dashboard() {
                     className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-4 sm:p-6 lg:p-10">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-white tracking-tighter uppercase italic drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] leading-tight">
+                    <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-white tracking-tighter uppercase italic drop-shadow-[0_0_30px_rgba(0,0,0,0.9)] leading-tight">
                         EL ENTRENAMIENTO <br className="hidden sm:block" /> <span className="text-indigo-500">DEL FUTURO</span>
                     </h1>
-                    <p className="text-indigo-200 text-sm sm:text-base lg:text-xl flex items-center gap-2 sm:gap-3 font-medium drop-shadow-md mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
-                        <Zap size={18} className="sm:w-[22px] sm:h-[22px] text-yellow-400 fill-yellow-400 animate-pulse" />
+                    <p className="text-indigo-200 text-[10px] sm:text-base lg:text-xl flex items-center gap-2 sm:gap-3 font-medium drop-shadow-md mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <Zap size={14} className="sm:w-[22px] sm:h-[22px] text-yellow-400 fill-yellow-400 animate-pulse" />
                         Bienvenido a encontrar tu mejor versión
                     </p>
                 </div>
@@ -132,8 +132,8 @@ export default function Dashboard() {
                         <h3 className="text-zinc-500 font-black uppercase tracking-widest text-[9px] sm:text-[10px]">Progreso Semanal</h3>
                     </div>
                     <div className="flex items-baseline gap-2">
-                        <p className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter">{stats.weeklySessions}</p>
-                        <p className="text-lg sm:text-xl lg:text-2xl font-black text-zinc-700 tracking-tighter italic whitespace-nowrap">DE 7 REALES</p>
+                        <p className="text-4xl sm:text-5xl lg:text-7xl font-black text-white tracking-tighter">{stats.weeklySessions}</p>
+                        <p className="text-base sm:text-xl lg:text-2xl font-black text-zinc-700 tracking-tighter italic whitespace-nowrap uppercase">DE 7 REALES</p>
                     </div>
                     <div className="mt-3 sm:mt-4 flex items-center gap-2 text-indigo-400 text-[10px] sm:text-xs font-mono uppercase tracking-widest">
                         <TrendingUp size={12} className="sm:w-[14px] sm:h-[14px]" /> Histórico total: {stats.totalSessions}

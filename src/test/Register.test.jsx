@@ -56,7 +56,7 @@ describe('Register Component', () => {
         fireEvent.click(screen.getByText(/Iniciar Sistema/i))
 
         await waitFor(() => {
-            expect(mockSignUp).toHaveBeenCalledWith('test@example.com', 'password123')
+            expect(mockSignUp).toHaveBeenCalledWith('test@example.com', 'password123', { full_name: 'Test User' })
             expect(screen.getByText(/¡Sistema Inicializado!/i)).toBeInTheDocument()
         })
     })

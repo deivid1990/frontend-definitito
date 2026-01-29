@@ -130,7 +130,7 @@ export default function Exercises() {
     }
 
     return (
-        <div className="max-w-7xl mx-auto p-4 lg:p-8">
+        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-10 pb-20">
             <ExerciseVideo
                 isOpen={videoModal.isOpen}
                 onClose={() => setVideoModal({ ...videoModal, isOpen: false })}
@@ -180,7 +180,7 @@ export default function Exercises() {
                     ))}
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-10">
                     {filteredExercises.length === 0 && (
                         <div className="col-span-full text-center py-32 bg-zinc-950/40 rounded-[3rem] border border-dashed border-white/5">
                             <Dumbbell className="mx-auto text-zinc-900 mb-6 h-24 w-24" />
@@ -189,7 +189,7 @@ export default function Exercises() {
                     )}
 
                     {filteredExercises.map(ex => (
-                        <div key={ex.id} className="group bg-zinc-900/40 backdrop-blur-md border border-white/5 p-8 rounded-[2.5rem] hover:border-indigo-500/30 transition-all relative overflow-hidden flex flex-col justify-between h-full">
+                        <div key={ex.id} className="group bg-zinc-900/40 backdrop-blur-md border border-white/5 p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] hover:border-indigo-500/30 transition-all relative overflow-hidden flex flex-col justify-between h-full shadow-xl">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                             <div>
@@ -215,7 +215,7 @@ export default function Exercises() {
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-black text-white mb-3 uppercase tracking-tighter italic group-hover:text-indigo-400 transition-colors">{ex.name}</h3>
+                                <h3 className="text-lg sm:text-xl font-black text-white mb-3 uppercase tracking-tighter italic group-hover:text-indigo-400 transition-colors break-words">{ex.name}</h3>
                                 <p className="text-xs text-zinc-500 leading-relaxed italic mb-8 line-clamp-3">
                                     "{ex.description || 'Sin protocolo de ejecución definido por el coach.'}"
                                 </p>
@@ -254,9 +254,9 @@ export default function Exercises() {
                                         </h2>
                                         <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-indigo-500/30"></div>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-10">
                                         {searchGlobalExercises(searchTerm).map((gEx, idx) => (
-                                            <div key={idx} className="group bg-indigo-600/5 backdrop-blur-md border border-indigo-500/20 p-8 rounded-[2.5rem] hover:bg-indigo-600/10 transition-all relative overflow-hidden flex flex-col justify-between border-dashed">
+                                            <div key={idx} className="group bg-indigo-600/5 backdrop-blur-md border border-indigo-500/20 p-5 sm:p-6 lg:p-8 rounded-[2rem] sm:rounded-[2.5rem] hover:bg-indigo-600/10 transition-all relative overflow-hidden flex flex-col justify-between border-dashed">
                                                 <div>
                                                     <h3 className="text-xl font-black text-white mb-3 uppercase tracking-tighter italic">{gEx.name}</h3>
                                                     <p className="text-[10px] text-zinc-500 leading-relaxed uppercase font-black tracking-widest mb-8">

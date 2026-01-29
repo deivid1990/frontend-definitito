@@ -97,7 +97,7 @@ export default function AICoach() {
     }
 
     return (
-        <div className="h-[calc(100vh-140px)] flex flex-col max-w-4xl mx-auto w-full gap-6">
+        <div className="min-h-[calc(100vh-180px)] flex flex-col max-w-4xl mx-auto w-full gap-6 px-4 sm:px-6 py-4">
 
             {/* Header / Selector */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 bg-zinc-900/40 p-4 rounded-[2rem] border border-zinc-800 backdrop-blur-sm">
