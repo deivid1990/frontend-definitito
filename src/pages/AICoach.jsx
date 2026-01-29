@@ -146,11 +146,11 @@ export default function AICoach() {
 
                 {/* CHAT MODE */}
                 {mode === 'chat' && (
-                    <div className="h-full flex flex-col bg-zinc-900/20 rounded-[2.5rem] border border-zinc-800 overflow-hidden backdrop-blur-sm">
-                        <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide">
+                    <div className="h-full flex flex-col bg-zinc-900/20 rounded-2xl sm:rounded-[2.5rem] border border-zinc-800 overflow-hidden backdrop-blur-sm">
+                        <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-4 sm:space-y-6 scrollbar-hide">
                             {messages.map((msg, i) => (
                                 <div key={i} className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'} animate-in fade-in slide-in-from-bottom-2`}>
-                                    <div className={`max-w-[80%] p-4 rounded-3xl text-sm leading-relaxed ${msg.role === 'user'
+                                    <div className={`max-w-[90%] sm:max-w-[80%] p-3 sm:p-4 rounded-2xl sm:rounded-3xl text-xs sm:text-sm leading-relaxed ${msg.role === 'user'
                                         ? 'bg-indigo-600 text-white rounded-tr-none'
                                         : 'bg-zinc-800/80 text-zinc-200 rounded-tl-none border border-zinc-700'
                                         }`}>
@@ -168,15 +168,15 @@ export default function AICoach() {
                             <div ref={messagesEndRef} />
                         </div>
 
-                        <form onSubmit={handleSend} className="p-4 bg-black/20 border-t border-white/5 flex gap-2">
+                        <form onSubmit={handleSend} className="p-2 sm:p-4 bg-black/20 border-t border-white/5 flex gap-2">
                             <input
                                 value={input}
                                 onChange={e => setInput(e.target.value)}
                                 placeholder="Hablar con la IA..."
-                                className="flex-1 bg-zinc-900 border border-zinc-800 rounded-2xl px-6 py-4 text-white outline-none focus:border-indigo-500 transition-all text-sm"
+                                className="flex-1 bg-zinc-900 border border-zinc-800 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 text-white outline-none focus:border-indigo-500 transition-all text-xs sm:text-sm"
                             />
-                            <button type="submit" disabled={loading} className="bg-indigo-600 p-4 rounded-2xl text-white hover:bg-indigo-500 transition-all active:scale-95 disabled:opacity-50">
-                                <Send size={20} />
+                            <button type="submit" disabled={loading} className="bg-indigo-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl text-white hover:bg-indigo-500 transition-all active:scale-95 disabled:opacity-50">
+                                <Send size={18} className="sm:w-5 sm:h-5" />
                             </button>
                         </form>
                     </div>

@@ -68,8 +68,8 @@ export default function History() {
     return (
         <div className="max-w-5xl mx-auto space-y-10 p-4">
             <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
-                <div>
-                    <h1 className="text-5xl font-black italic tracking-tighter text-white uppercase">
+                <div className="flex-1 min-w-0">
+                    <h1 className="text-3xl sm:text-5xl font-black italic tracking-tighter text-white uppercase leading-tight">
                         Historial de <span className="text-indigo-500">Entrenamientos</span>
                     </h1>
                 </div>

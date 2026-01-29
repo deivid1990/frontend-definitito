@@ -126,7 +126,7 @@ export default function Layout() {
             )}
 
             {/* Contenido Principal con Iluminación Ambiental */}
-            <main className="flex-1 p-4 sm:p-6 lg:p-8 pt-20 md:pt-8 overflow-y-auto relative bg-[#050510]">
+            <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 pt-20 md:pt-8 overflow-y-auto relative bg-[#050510]">
                 {/* Background Tech Overlays */}
                 <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none z-0"></div>
                 <div className="fixed inset-0 bg-cyber-grid opacity-[0.05] pointer-events-none z-0"></div>

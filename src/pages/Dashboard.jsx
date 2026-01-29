@@ -153,78 +153,77 @@ export default function Dashboard() {
                             <span className="text-[8px] sm:text-[9px] font-black text-zinc-500 uppercase tracking-tighter">Tendencia Neural</span>
                         </div>
                     </div>
-                    <div className="mt-4 bg-zinc-950/20 rounded-2xl sm:rounded-3xl relative overflow-hidden h-[300px]">
-                        <div className="absolute inset-0 p-2 sm:p-6">
-                            {stats.constancyScore?.length > 0 && (
-                                <ResponsiveContainer width="100%" height="100%" minHeight={100}>
-                                    <AreaChart data={stats.constancyScore} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                        <defs>
-                                            <linearGradient id="colorConstancy" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                                                <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
-                                            </linearGradient>
-                                        </defs>
-                                        <Tooltip
-                                            contentStyle={{ backgroundColor: '#09090b', border: '1px solid #27272a', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
-                                            itemStyle={{ color: '#10b981', fontSize: '10px', fontWeight: 'black', textTransform: 'uppercase' }}
-                                            labelStyle={{ color: '#52525b', fontSize: '9px', fontWeight: 'bold' }}
-                                        />
-                                        <Area
-                                            type="monotone"
-                                            dataKey="score"
-                                            stroke="#10b981"
-                                            strokeWidth={4}
-                                            fillOpacity={1}
-                                            fill="url(#colorConstancy)"
-                                            animationDuration={1500}
-                                        />
-                                    </AreaChart>
-                                </ResponsiveContainer>
-                            )}
-                        </div>
+                    <div className="mt-4 bg-zinc-950/20 rounded-2xl sm:rounded-3xl p-2 sm:p-6" style={{ height: '300px' }}>
+                        {stats.constancyScore?.length > 0 && (
+                            <ResponsiveContainer width="100%" height="100%">
+                                <AreaChart data={stats.constancyScore} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                    <defs>
+                                        <linearGradient id="colorConstancy" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                                            <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                                        </linearGradient>
+                                    </defs>
+                                    <Tooltip
+                                        contentStyle={{ backgroundColor: '#09090b', border: '1px solid #27272a', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
+                                        itemStyle={{ color: '#10b981', fontSize: '10px', fontWeight: 'black', textTransform: 'uppercase' }}
+                                        labelStyle={{ color: '#52525b', fontSize: '9px', fontWeight: 'bold' }}
+                                    />
+                                    <Area
+                                        type="monotone"
+                                        dataKey="score"
+                                        stroke="#10b981"
+                                        strokeWidth={4}
+                                        fillOpacity={1}
+                                        fill="url(#colorConstancy)"
+                                        animationDuration={1500}
+                                    />
+                                </AreaChart>
+                            </ResponsiveContainer>
+                        )}
                     </div>
-                </div>
-            </div>
-
-            {/* Action Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                {/* CTA Principal */}
-                <div className="bg-indigo-600 rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-white/20 transition-all duration-700"></div>
-                    <div className="relative z-10">
-                        <h3 className="text-2xl sm:text-3xl font-black text-white mb-2 sm:mb-3 uppercase italic tracking-tighter">Coach IA</h3>
-                        <p className="text-indigo-100 mb-6 sm:mb-8 max-w-xs leading-relaxed text-sm sm:text-base">
-                            Analizando tus datos... Tu fuerza ha subido un 5%. ¿Listo para una rutina de potencia?
-                        </p>
-                        <Link to="/coach" className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest hover:bg-indigo-50 transition-all flex items-center justify-center gap-2 sm:gap-3 w-fit">
-                            <PlusCircle size={18} className="sm:w-5 sm:h-5" /> Generar Entrenamiento
-                        </Link>
-                    </div>
-                </div>
-
-                {/* Accesos Rápidos */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                    <Link to="/rutinas" className="bg-zinc-900/40 border border-zinc-800 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[2.5rem] hover:border-emerald-500/40 hover:bg-zinc-900/60 transition-all duration-500 group flex flex-col items-center text-center justify-center gap-3 sm:gap-5 shadow-xl hover:shadow-emerald-500/5">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-emerald-500/10">
-                            <Weight size={24} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-                        </div>
-                        <div>
-                            <h4 className="font-black text-white uppercase tracking-tighter text-base sm:text-lg italic">Entrenar</h4>
-                            <p className="text-[8px] sm:text-[9px] text-zinc-500 font-mono tracking-[0.2em] mt-1 bg-white/5 py-1 px-2 sm:px-3 rounded-full">EJECUTAR SESIÓN</p>
-                        </div>
-                    </Link>
-
-                    <Link to="/historial" className="bg-zinc-900/40 border border-zinc-800 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[2.5rem] hover:border-indigo-500/40 hover:bg-zinc-900/60 transition-all duration-500 group flex flex-col items-center text-center justify-center gap-3 sm:gap-5 shadow-xl hover:shadow-indigo-500/5">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg shadow-indigo-500/10">
-                            <Activity size={24} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-                        </div>
-                        <div>
-                            <h4 className="font-black text-white uppercase tracking-tighter text-base sm:text-lg italic">Historial</h4>
-                            <p className="text-[8px] sm:text-[9px] text-zinc-500 font-mono tracking-[0.2em] mt-1 bg-white/5 py-1 px-2 sm:px-3 rounded-full">LOG DE DATOS</p>
-                        </div>
-                    </Link>
                 </div>
             </div>
         </div>
+
+            {/* Action Section */ }
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        {/* CTA Principal */}
+        <div className="bg-indigo-600 rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-white/20 transition-all duration-700"></div>
+            <div className="relative z-10">
+                <h3 className="text-2xl sm:text-3xl font-black text-white mb-2 sm:mb-3 uppercase italic tracking-tighter">Coach IA</h3>
+                <p className="text-indigo-100 mb-6 sm:mb-8 max-w-xs leading-relaxed text-sm sm:text-base">
+                    Analizando tus datos... Tu fuerza ha subido un 5%. ¿Listo para una rutina de potencia?
+                </p>
+                <Link to="/coach" className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest hover:bg-indigo-50 transition-all flex items-center justify-center gap-2 sm:gap-3 w-fit">
+                    <PlusCircle size={18} className="sm:w-5 sm:h-5" /> Generar Entrenamiento
+                </Link>
+            </div>
+        </div>
+
+        {/* Accesos Rápidos */}
+        <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            <Link to="/rutinas" className="bg-zinc-900/40 border border-zinc-800 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[2.5rem] hover:border-emerald-500/40 hover:bg-zinc-900/60 transition-all duration-500 group flex flex-col items-center text-center justify-center gap-3 sm:gap-5 shadow-xl hover:shadow-emerald-500/5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-emerald-500/10">
+                    <Weight size={24} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                </div>
+                <div>
+                    <h4 className="font-black text-white uppercase tracking-tighter text-base sm:text-lg italic">Entrenar</h4>
+                    <p className="text-[8px] sm:text-[9px] text-zinc-500 font-mono tracking-[0.2em] mt-1 bg-white/5 py-1 px-2 sm:px-3 rounded-full">EJECUTAR SESIÓN</p>
+                </div>
+            </Link>
+
+            <Link to="/historial" className="bg-zinc-900/40 border border-zinc-800 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-[2.5rem] hover:border-indigo-500/40 hover:bg-zinc-900/60 transition-all duration-500 group flex flex-col items-center text-center justify-center gap-3 sm:gap-5 shadow-xl hover:shadow-indigo-500/5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg shadow-indigo-500/10">
+                    <Activity size={24} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                </div>
+                <div>
+                    <h4 className="font-black text-white uppercase tracking-tighter text-base sm:text-lg italic">Historial</h4>
+                    <p className="text-[8px] sm:text-[9px] text-zinc-500 font-mono tracking-[0.2em] mt-1 bg-white/5 py-1 px-2 sm:px-3 rounded-full">LOG DE DATOS</p>
+                </div>
+            </Link>
+        </div>
+    </div>
+        </div >
     )
 }

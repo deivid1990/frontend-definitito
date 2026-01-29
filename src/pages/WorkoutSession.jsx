@@ -131,12 +131,12 @@ export default function WorkoutSession() {
                 exerciseName={videoModal.name}
             />
 
-            <div className="mb-10 flex justify-between items-end gap-6 bg-zinc-900/40 p-8 rounded-[2.5rem] border border-white/5 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+            <div className="mb-6 sm:mb-10 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 bg-zinc-900/40 p-4 sm:p-8 rounded-2xl sm:rounded-[2.5rem] border border-white/5 backdrop-blur-md shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500 group-hover:w-2 transition-all"></div>
-                <div>
-                    <h1 className="text-4xl font-black text-white uppercase italic tracking-tighter mb-1">{routine.name}</h1>
-                    <p className="text-indigo-400 font-mono text-sm flex items-center gap-2 uppercase tracking-[0.3em] font-bold">
-                        <Play size={12} fill="currentColor" className="animate-pulse" />
+                <div className="min-w-0 flex-1">
+                    <h1 className="text-2xl sm:text-4xl font-black text-white uppercase italic tracking-tighter mb-1 truncate">{routine.name}</h1>
+                    <p className="text-indigo-400 font-mono text-[10px] sm:text-sm flex items-center gap-2 uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold">
+                        <Play size={10} fill="currentColor" className="animate-pulse" />
                         {(() => {
                             const dayNames = {
                                 1: 'Lunes', 2: 'Martes', 3: 'Miércoles',
@@ -145,14 +145,14 @@ export default function WorkoutSession() {
                             return dayNames[dayNumber] || `Día ${dayNumber}`;
                         })()}
                         <span className="opacity-30 mx-1">|</span>
-                        {activeDay?.name}
+                        <span className="truncate">{activeDay?.name}</span>
                     </p>
                 </div>
-                <div className="text-right">
-                    <div className="flex items-center gap-2 text-zinc-500 mb-1 justify-end font-mono text-xs font-black tracking-widest uppercase">
-                        <Timer size={12} className="text-indigo-500" /> Tiempo de Misión
+                <div className="flex sm:block items-center justify-between w-full sm:w-auto mt-2 sm:mt-0 pt-4 sm:pt-0 border-t sm:border-t-0 border-white/5">
+                    <div className="flex items-center gap-2 text-zinc-500 sm:mb-1 sm:justify-end font-mono text-[9px] sm:text-xs font-black tracking-widest uppercase">
+                        <Timer size={12} className="text-indigo-500" /> <span className="sm:inline hidden">Tiempo de Misión</span><span className="sm:hidden">TIEMPO</span>
                     </div>
-                    <span className="text-white font-mono text-4xl font-black tabular-nums tracking-tighter">{formatTime(elapsedTime)}</span>
+                    <span className="text-white font-mono text-2xl sm:text-4xl font-black tabular-nums tracking-tighter">{formatTime(elapsedTime)}</span>
                 </div>
             </div>
 
@@ -177,38 +177,41 @@ export default function WorkoutSession() {
                         </div>
 
                         <div className="space-y-4">
-                            <div className="grid grid-cols-10 gap-3 px-2 text-xs font-black text-zinc-600 uppercase tracking-[0.2em] text-center">
-                                <div className="col-span-1">SET</div>
-                                <div className="col-span-3">PESO (KG)</div>
+                            <div className="grid grid-cols-12 gap-2 px-1 sm:px-2 text-[8px] sm:text-xs font-black text-zinc-600 uppercase tracking-widest text-center">
+                                <div className="col-span-2">SET</div>
+                                <div className="col-span-4">PESO</div>
                                 <div className="col-span-3">REPS</div>
-                                <div className="col-span-3">CONTROL</div>
+                                <div className="col-span-3">FIN</div>
                             </div>
 
                             {ex.sets.map((set, setIdx) => (
-                                <div key={setIdx} className={`grid grid-cols-10 gap-3 items-center p-4 rounded-2xl transition-all duration-500 border ${set.completed ? 'bg-emerald-500/10 border-emerald-500/30' : 'bg-black/40 border-white/5'}`}>
-                                    <div className={`col-span-1 text-center font-mono text-xs font-black ${set.completed ? 'text-emerald-400' : 'text-zinc-600'}`}>{setIdx + 1}</div>
-                                    <div className="col-span-3">
-                                        <input
-                                            type="number"
-                                            value={set.weight}
-                                            onChange={(e) => updateSet(exIdx, setIdx, 'weight', e.target.value)}
-                                            className="w-full bg-black/60 text-white text-center rounded-xl py-3 border border-white/10 focus:border-indigo-500 outline-none transition-all font-mono font-bold shadow-inner"
-                                        />
+                                <div key={setIdx} className={`grid grid-cols-12 gap-2 items-center p-2 sm:p-4 rounded-xl sm:rounded-2xl transition-all duration-500 border ${set.completed ? 'bg-emerald-500/10 border-emerald-500/30' : 'bg-black/40 border-white/5'}`}>
+                                    <div className={`col-span-2 text-center font-mono text-[10px] sm:text-xs font-black ${set.completed ? 'text-emerald-400' : 'text-zinc-600'}`}>{setIdx + 1}</div>
+                                    <div className="col-span-4">
+                                        <div className="relative">
+                                            <input
+                                                type="number"
+                                                value={set.weight}
+                                                onChange={(e) => updateSet(exIdx, setIdx, 'weight', e.target.value)}
+                                                className="w-full bg-black/60 text-white text-center rounded-lg sm:rounded-xl py-2 sm:py-3 border border-white/10 focus:border-indigo-500 outline-none transition-all font-mono font-bold text-xs sm:text-base"
+                                            />
+                                            <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[8px] text-zinc-600 font-black hidden sm:block">KG</span>
+                                        </div>
                                     </div>
                                     <div className="col-span-3">
                                         <input
                                             type="number"
                                             value={set.reps}
                                             onChange={(e) => updateSet(exIdx, setIdx, 'reps', e.target.value)}
-                                            className="w-full bg-black/60 text-white text-center rounded-xl py-3 border border-white/10 focus:border-indigo-500 outline-none transition-all font-mono font-bold shadow-inner"
+                                            className="w-full bg-black/60 text-white text-center rounded-lg sm:rounded-xl py-2 sm:py-3 border border-white/10 focus:border-indigo-500 outline-none transition-all font-mono font-bold text-xs sm:text-base"
                                         />
                                     </div>
                                     <div className="col-span-3 flex justify-center">
                                         <button
                                             onClick={() => toggleComplete(exIdx, setIdx)}
-                                            className={`p-3 rounded-xl transition-all ${set.completed ? 'bg-emerald-500 text-black shadow-[0_0_20px_rgba(16,185,129,0.4)]' : 'bg-zinc-800 text-zinc-500 hover:text-emerald-400'}`}
+                                            className={`p-2 sm:p-3 rounded-lg sm:rounded-xl transition-all ${set.completed ? 'bg-emerald-500 text-black shadow-[0_0_20px_rgba(16,185,129,0.4)]' : 'bg-zinc-800 text-zinc-500'}`}
                                         >
-                                            <CheckCircle size={20} />
+                                            <CheckCircle size={18} className="sm:w-5 sm:h-5" />
                                         </button>
                                     </div>
                                 </div>
