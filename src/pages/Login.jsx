@@ -26,12 +26,15 @@ export default function Login() {
         } catch (err) {
             console.error('Error de login:', err)
             // Manejo de errores amigable
-            if (err.message.includes("Invalid login")) {
+            const msg = err.message || ""
+            if (msg.includes("Invalid login")) {
                 setError('Credenciales incorrectas. Verifica tu email y clave.')
-            } else if (err.message.includes("Email not confirmed")) {
-                setError('Por favor, confirma tu email antes de acceder.')
+            } else if (msg.includes("Email not confirmed")) {
+                setError('Por favor, confirma tu email antes de acceder. Revisa tu bandeja de entrada o spam.')
+            } else if (msg.includes("rate limit")) {
+                setError('Demasiados intentos. Por favor, espera un poco antes de volver a intentar.')
             } else {
-                setError('Error de conexión con el sistema.')
+                setError(msg || 'Error de conexión con el sistema de autenticación.')
             }
         } finally {
             setIsLoading(false)

@@ -59,8 +59,8 @@ export default function TrainingSelfies() {
     }
 
     const uploadSelfie = async (e) => {
-        e.preventDefault()
-        if (!newSelfie.file) return
+        if (e) e.preventDefault()
+        if (!newSelfie.file || uploading) return
 
         try {
             setUploading(true)
@@ -70,32 +70,43 @@ export default function TrainingSelfies() {
             const fileName = `${user.id}/${Date.now()}.${fileExt}`
             const filePath = `selfies/${fileName}`
 
+            // Asegurarnos de que el bucket existe y el archivo se sube correctamente
             const { error: uploadError } = await supabase.storage
-                .from('gym-assets') // Asumimos que existe o lo usaremos como bucket principal
-                .upload(filePath, newSelfie.file)
+                .from('gym-assets')
+                .upload(filePath, newSelfie.file, {
+                    cacheControl: '3600',
+                    upsert: false
+                })
 
             if (uploadError) throw uploadError
 
+            // Obtener URL pública (Asegurándonos de que sea un string limpio)
             const { data: { publicUrl } } = supabase.storage
                 .from('gym-assets')
                 .getPublicUrl(filePath)
 
+            if (!publicUrl) throw new Error("No se pudo generar la URL de la imagen")
+
             // 2. Guardar registro en la base de datos
+            // IMPORTANTE: Aseguramos que los campos coincidan perfectamente con el esquema
             const { error: dbError } = await supabase
                 .from('entrenamiento_selfies')
                 .insert([{
                     user_id: user.id,
-                    image_url: publicUrl,
-                    description: newSelfie.description
+                    image_url: String(publicUrl),
+                    description: String(newSelfie.description || '').trim()
                 }])
 
             if (dbError) throw dbError
 
-            setShowUploadModal(false)
+            // Éxito: Limpiar estados y refrescar vista
             setNewSelfie({ description: '', file: null, preview: null })
-            fetchSelfies()
+            setShowUploadModal(false)
+            await fetchSelfies()
+
         } catch (error) {
-            alert('Error al subir: ' + error.message)
+            console.error('Crash preventer: Error en uploadSelfie:', error)
+            alert('⚠️ Error técnico: ' + (error.message || "Error desconocido al sincronizar foto"))
         } finally {
             setUploading(false)
         }

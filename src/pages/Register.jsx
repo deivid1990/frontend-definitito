@@ -26,13 +26,18 @@ export default function Register() {
             if (authError) throw authError
 
             if (data?.user) {
-                // El perfil se creará automáticamente en el AuthContext 
-                // una vez el usuario confirme su correo e inicie sesión (evitamos el 401).
                 setIsSubmitted(true)
             }
-
         } catch (err) {
-            setError(err.message || "Error al registrarse.")
+            console.error('Error de registro:', err)
+            const msg = err.message || ""
+            if (msg.includes("User already registered")) {
+                setError('Este correo ya está registrado. Intenta iniciar sesión.')
+            } else if (msg.includes("Password should be")) {
+                setError('La contraseña es demasiado débil (mínimo 6 caracteres).')
+            } else {
+                setError(msg || "Error al procesar el registro en el servidor.")
+            }
         } finally {
             setIsLoading(false)
         }
@@ -40,18 +45,23 @@ export default function Register() {
 
     if (isSubmitted) {
         return (
-            <div className="min-h-screen bg-deep-space flex items-center justify-center p-4">
-                <div className="bg-cyber-gray/90 backdrop-blur-xl p-8 rounded-3xl border border-neon-green/30 text-center max-w-md animate-in zoom-in-95">
-                    <div className="inline-flex items-center justify-center p-4 rounded-full bg-neon-green/10 mb-6">
-                        <Activity className="text-neon-green h-12 w-12" />
+            <div className="min-h-screen bg-zinc-950 flex items-center justify-center p-4">
+                <div className="bg-zinc-900/80 backdrop-blur-xl p-8 rounded-[2.5rem] border border-cyan-500/30 text-center max-w-md shadow-2xl animate-in zoom-in-95">
+                    <div className="inline-flex items-center justify-center p-5 rounded-2xl bg-cyan-500/10 mb-6 border border-cyan-500/20">
+                        <Activity className="text-cyan-400 h-12 w-12 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
                     </div>
-                    <h2 className="text-3xl font-black text-white mb-4 uppercase italic">¡Sistema Inicializado! GYMAI COACH</h2>
-                    <p className="text-slate-300 mb-8 leading-relaxed">
-                        Se ha enviado un correo de <span className="text-neon-green font-bold">confirmación y autenticación</span> a <span className="text-white font-mono">{email}</span>.
-                        Por favor, verifica tu bandeja de entrada para activar tu cuenta.
+                    <h2 className="text-3xl font-black text-white mb-4 italic uppercase tracking-tighter">¡SISTEMA INICIALIZADO!</h2>
+                    <p className="text-slate-400 mb-8 leading-relaxed font-medium">
+                        Se ha enviado un correo de <span className="text-cyan-400 font-bold">confirmación</span> a:
+                        <br />
+                        <span className="text-white font-mono text-sm break-all">{email}</span>
+                        <br /><br />
+                        <span className="text-xs italic bg-white/5 py-2 px-4 rounded-lg block">
+                            Revisa tu bandeja de entrada y spam. Debes activar el enlace para poder entrar al sistema.
+                        </span>
                     </p>
-                    <Link to="/login" className="block w-full py-4 bg-white text-black rounded-xl font-bold uppercase tracking-widest hover:bg-neon-green transition-all shadow-lg">
-                        Ir al Acceso
+                    <Link to="/login" className="block w-full py-4 bg-cyan-600 text-white rounded-xl font-bold uppercase tracking-widest hover:bg-cyan-500 transition-all shadow-lg shadow-cyan-500/20">
+                        VOLVER AL LOGIN
                     </Link>
                 </div>
             </div>
@@ -59,58 +69,69 @@ export default function Register() {
     }
 
     return (
-        <div className="min-h-screen bg-deep-space relative flex items-center justify-center p-4 overflow-hidden">
-            {/* Cyber Background */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-gradient-to-t from-neon-purple/20 to-transparent pointer-events-none"></div>
+        <div className="min-h-screen bg-zinc-950 relative flex items-center justify-center p-4 overflow-hidden">
+            {/* Background Image Layer */}
+            <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
+                className="absolute inset-0 w-full h-full object-cover opacity-20 scale-110 blur-sm"
+                alt="Gym Background"
+            />
+
+            {/* Background Blur Effects */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600"></div>
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="relative z-10 w-full max-w-md">
-                <div className="text-center mb-8">
-                    <div className="inline-flex justify-center items-center p-4 rounded-full border-2 border-neon-green/30 bg-black/40 shadow-[0_0_20px_rgba(0,255,159,0.2)] mb-6 animate-pulse-slow">
-                        <Activity className="text-neon-green h-10 w-10" />
+                <div className="text-center mb-8 group">
+                    <div className="inline-flex justify-center items-center p-4 bg-black/50 border border-cyan-500/30 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.2)] mb-6 group-hover:scale-110 transition-transform backdrop-blur-md">
+                        <Activity className="text-cyan-400 h-10 w-10" />
                     </div>
-                    <h1 className="text-4xl font-black text-white mb-2 uppercase italic tracking-tighter">
-                        Crear <span className="text-neon-green">Cuenta</span>
+                    <h1 className="text-4xl font-black text-white mb-2 italic uppercase tracking-tighter">
+                        Nueva <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Identidad</span>
                     </h1>
-                    <p className="text-slate-400 font-mono text-xs tracking-widest">JOIN THE RESISTANCE</p>
+                    <p className="text-slate-500 font-mono text-[10px] tracking-[0.3em] uppercase">Phase 1: Registration</p>
                 </div>
 
-                <div className="bg-cyber-gray/90 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/10 relative">
+                <div className="bg-zinc-900/60 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-2xl border border-white/10 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
+
                     {error && (
-                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-200 rounded-xl text-sm font-bold border-l-4 border-l-red-500">
-                            ⚠ {error}
+                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 text-red-200 rounded-xl text-xs font-bold flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-[0_0_5px_red]"></div>
+                            {error}
                         </div>
                     )}
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
-                            <label className="block text-neon-green text-[10px] font-bold uppercase tracking-wider mb-2 ml-1">Identidad (Nombre)</label>
+                            <label className="block text-cyan-400 text-[10px] font-black uppercase tracking-[0.2em] mb-2 ml-1">Firma Real (Nombre)</label>
                             <input
                                 type="text"
                                 required
-                                className="input-field bg-black/50 focus:border-neon-green focus:ring-neon-green"
-                                placeholder="Juan Pérez"
+                                className="w-full bg-black/40 border border-zinc-800 focus:border-cyan-500/50 text-white px-4 py-3 rounded-xl outline-none transition-all placeholder:text-zinc-600 text-sm"
+                                placeholder="JUAN PÉREZ"
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
                             />
                         </div>
                         <div>
-                            <label className="block text-neon-green text-[10px] font-bold uppercase tracking-wider mb-2 ml-1">Correo Electrónico</label>
+                            <label className="block text-cyan-400 text-[10px] font-black uppercase tracking-[0.2em] mb-2 ml-1">Canal de Enlace (Email)</label>
                             <input
                                 type="email"
                                 required
-                                className="input-field bg-black/50 focus:border-neon-green focus:ring-neon-green"
-                                placeholder="usuario@futuro.com"
+                                className="w-full bg-black/40 border border-zinc-800 focus:border-cyan-500/50 text-white px-4 py-3 rounded-xl outline-none transition-all placeholder:text-zinc-600 text-sm"
+                                placeholder="USUARIO@SISTEMA.COM"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
                         <div>
-                            <label className="block text-neon-green text-[10px] font-bold uppercase tracking-wider mb-2 ml-1">Contraseña</label>
+                            <label className="block text-cyan-400 text-[10px] font-black uppercase tracking-[0.2em] mb-2 ml-1">Clave de Encriptación</label>
                             <input
                                 type="password"
                                 required
-                                className="input-field bg-black/50 focus:border-neon-green focus:ring-neon-green"
+                                className="w-full bg-black/40 border border-zinc-800 focus:border-cyan-500/50 text-white px-4 py-3 rounded-xl outline-none transition-all placeholder:text-zinc-600 text-sm"
                                 placeholder="••••••••"
                                 value={password}
                                 minLength={6}
@@ -121,18 +142,17 @@ export default function Register() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-4 rounded-xl flex justify-center items-center text-lg font-bold shadow-[0_0_15px_rgba(0,255,159,0.3)] hover:shadow-[0_0_30px_rgba(0,255,159,0.5)] mt-6 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white transition-all disabled:opacity-50 uppercase tracking-widest skew-x-[-5deg] hover:skew-x-0"
+                            className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 disabled:bg-zinc-800 text-white font-black rounded-xl shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 group mt-4 uppercase tracking-[0.2em] text-xs"
                         >
-                            {isLoading ? <Loader2 className="animate-spin mr-2" /> : <Play size={20} className="mr-2 fill-current" />}
-                            {isLoading ? 'Procesando...' : 'Iniciar Sistema'}
+                            {isLoading ? <Loader2 className="animate-spin" /> : <>INICIAR SISTEMA <Play size={14} className="fill-current" /></>}
                         </button>
                     </form>
 
                     <div className="mt-8 pt-6 border-t border-white/5 text-center">
-                        <p className="text-slate-500 text-sm">
-                            ¿Ya registrado?{' '}
-                            <Link to="/login" className="text-neon-green hover:underline font-bold inline-flex items-center gap-1 transition-colors">
-                                ACCEDER <ArrowRight size={14} />
+                        <p className="text-slate-500 text-xs font-medium">
+                            ¿IDENTIDAD EXISTENTE?{' '}
+                            <Link to="/login" className="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">
+                                ACCEDER AQUÍ
                             </Link>
                         </p>
                     </div>
