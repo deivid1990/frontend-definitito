@@ -1,0 +1,1661 @@
+﻿
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90mC:/Users/david/OneDrive/Escritorio/gymai-proyecto/frontend/ai-gym-trainer[39m
+
+node.exe : [90mstderr[2m | 
+src/test/Profile.test.jsx[2m
+ > [22m[2mProfile 
+Component Extended[2m > 
+[22m[2mdebe manejar 
+cambios en selects y errores 
+de guardado
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([90mst  
+  derr[2m...res de guarda   
+ do:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [31mÔØ»[39m src/test/Profile.test.jsx [2m([22m[2m2 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[33m 1277[2mms[22m[39m
+[31m     [31m├ù[31m debe manejar cambios en selects y errores de guardado[39m[32m 240[2mms[22m[39m
+[31m     [31m├ù[31m debe mostrar mensaje cuando no hay historial[39m[33m 1031[2mms[22m[39m
+
+[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3
+9m[1m[41m Failed Tests 2 [
+49m[22m[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»Ô
+Ä»ÔÄ»[39m
+
+[41m[1m FAIL [22m[49m src
+/test/Profile.test.jsx[2m > 
+[22mProfile Component 
+Extended[2m > [22mdebe 
+manejar cambios en selects y 
+errores de guardado
+[31m[1mTestingLibraryElemen
+tError[22m[39m: Unable to 
+find an element with the 
+display value: Principiante.
+
+Ignored nodes: comments, 
+script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"m
+ax-w-4xl mx-auto p-3 sm:p-4 
+pb-16 sm:pb-24 
+animate-fade-up space-y-8 
+sm:space-y-12"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"flex 
+flex-col sm:flex-row 
+justify-between items-start 
+sm:items-start gap-4"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h1[39m
+            [33mclass[39m=
+[32m"text-2xl sm:text-3xl 
+lg:text-4xl font-black 
+text-white mb-2 flex 
+items-center gap-3 sm:gap-4 
+italic uppercase 
+tracking-tighter"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-user 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"24"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"24"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M19 
+21v-2a4 4 0 0 0-4-4H9a4 4 0 
+0 0-4 4v2"[39m
+              [36m/>[39m
+              
+[36m<circle[39m
+                
+[33mcx[39m=[32m"12"[39m
+                
+[33mcy[39m=[32m"7"[39m
+                
+[33mr[39m=[32m"4"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Mis [0m
+            [36m<span[39m
+              [33mclass[39m
+=[32m"text-indigo-500"[39m
+            [36m>[39m
+              
+[0mBiometr├¡as[0m
+            [36m</span>[39m
+          [36m</h1>[39m
+          [36m<p[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-medium font-mono 
+text-[10px] sm:text-xs 
+uppercase 
+tracking-widest"[39m
+          [36m>[39m
+            
+[0mSincronizaci├│n de 
+par├ímetros vitales con el 
+n├║cleo AI[0m
+          [36m</p>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"grid 
+grid-cols-1 lg:grid-cols-2 
+gap-6 sm:gap-8 
+lg:gap-12"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"bg-zinc-900/60 
+backdrop-blur-2xl p-6 sm:p-8 
+rounded-2xl 
+sm:rounded-[3rem] border 
+border-white/5 shadow-2xl 
+relative overflow-hidden 
+h-fit"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"absolute top-0 left-0 
+w-full h-[1px] 
+bg-gradient-to-r 
+from-transparent 
+via-indigo-500/50 
+to-transparent"[39m
+          [36m/>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-indigo-400 
+font-black uppercase 
+text-[9px] sm:text-[10px] 
+tracking-[0.3em] 
+sm:tracking-[0.4em] mb-6 
+sm:mb-8 flex items-center 
+gap-2"[39m
+          [36m>[39m
+            [0mACTUALIZAR 
+ESTADO[0m
+          [36m</h2>[39m
+          [36m<form[39m
+            [33mclass[39m=
+[32m"space-y-5 
+sm:space-y-6"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m
+=[32m"space-y-3 
+sm:space-y-4"[39m
+            [36m>[39m
+              
+[36m<label[39m
+                
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+              [36m>[39m
+                [0mFirma 
+del Atleta[0m
+              
+[36m</label>[39m
+              
+[36m<input[39m
+                
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-bold text-sm 
+sm:text-base"[39m
+                [33mname[39
+m=[32m"full_name"[39m
+                [33mplacehol
+der[39m=[32m"Nombre 
+Completo"[39m
+                [33mvalue[3
+9m=[32m"John"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEdad[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"age"[39m
+                  [33mplaceh
+older[39m=[32m"25"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  [33mvalue
+[39m=[32m"20"[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  [0mPeso 
+(kg)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"weight"[39m
+                  [33mplaceh
+older[39m=[32m"70"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  [33mvalue
+[39m=[32m"70"[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEstatura (cm)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"height"[39m
+                  [33mplaceh
+older[39m=[32m"175"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  [33mvalue
+[39m=[32m"170"[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mObjetivo[0m
+                
+[36m</label>[39m
+                
+[36m<select[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none cursor-pointer 
+font-black text-[9px] 
+sm:text-[10px] 
+uppercase"[39m
+                  [33mname[
+39m=[32m"goal"[39m
+                [36m>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"salud"[39m
+                  [36m>[39m
+                    
+[0mSalud[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"hipertrofia"[39
+m
+                  [36m>[39m
+                    
+[0mM├║sculo[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"fuerza"[39m
+                  [36m>[39m
+                    
+[0mFuerza[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"definicion"[39m
+                  [36m>[39m
+                    
+[0mGrasa[0m
+                  
+[36m</option>[39m
+                
+[36m</select>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              
+[33mclass[39m=[32m"w-full 
+py-5 bg-indigo-600 
+hover:bg-indigo-500 
+text-white font-black 
+uppercase italic 
+tracking-[0.15em] 
+text-[10px] rounded-2xl 
+transition-all 
+active:scale-95 
+disabled:opacity-50 border 
+border-white/10 shadow-xl 
+shadow-indigo-600/20"[39m
+              [33mtype[39m=
+[32m"submit"[39m
+            [36m>[39m
+              [0mTRANSMITIR 
+BIOMETR├ìA[0m
+            
+[36m</button>[39m
+          [36m</form>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"space-y-6"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-black uppercase 
+text-[10px] tracking-[0.4em] 
+ml-4 flex items-center 
+gap-3"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-history 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"14"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"14"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 12a9 9 
+0 1 0 9-9 9.75 9.75 0 0 
+0-6.74 2.74L3 8"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 
+3v5h5"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M12 7v5l4 
+2"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Hist├│rico 
+de Registros[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"space-y-4 max-h-[600px] 
+overflow-y-auto pr-4 
+scrollbar-hide"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"p-10 
+border border-dashed 
+border-zinc-800 
+rounded-[2rem] 
+text-center"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[3
+9m=[32m"text-zinc-600 
+font-mono text-[10px] 
+uppercase 
+tracking-widest"[39m
+              [36m>[39m
+                [0mSin 
+registros detectados[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2mÔØ»[22m 
+Object.getElementError node_m
+odules/@testing-library/dom/d
+ist/config.js:[2m37:19[22m
+[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m76:38[2
+2m[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m52:17[2
+2m[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m95:19[2
+2m[39m
+[36m [2mÔØ»[22m src/test/P
+rofile.test.jsx:[2m49:38[22
+m[39m
+    [90m 47| [39m
+    [90m 48| [39m        
+[90m// Cambiar select[39m
+    [90m 49| [39m        
+[35mconst[39m 
+fitnessSelect [33m=[39m scr
+een[33m.[39m[34mgetByDispl
+ayValue[39m([32m'Principian
+te'[39m)
+    [90m   | [39m          
+                           
+[31m^[39m
+    [90m 50| [39m        fi
+reEvent.change(fitnessSelect,
+ { target: { value: 
+'Avanzado' ÔÇª
+    [90m 51| [39m        [
+34mexpect[39m(fitnessSelect
+[33m.[39mvalue)[33m.[39m[
+34mtoBe[39m([32m'Avanzado'
+[39m)
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ
+»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»Ô
+Ä»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/2]Ô
+Ä»[22m[39m
+
+[41m[1m FAIL [22m[49m src
+/test/Profile.test.jsx[2m > 
+[22mProfile Component 
+Extended[2m > [22mdebe 
+mostrar mensaje cuando no 
+hay historial
+[31m[1mTestingLibraryElemen
+tError[22m[39m: Unable to 
+find an element with the 
+text: /No hay registros 
+biomec├ínicos detectados/i. 
+This could be because the 
+text is broken up by 
+multiple elements. In this 
+case, you can provide a 
+function for your text 
+matcher to make your matcher 
+more flexible.
+
+Ignored nodes: comments, 
+script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"m
+ax-w-4xl mx-auto p-3 sm:p-4 
+pb-16 sm:pb-24 
+animate-fade-up space-y-8 
+sm:space-y-12"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"flex 
+flex-col sm:flex-row 
+justify-between items-start 
+sm:items-start gap-4"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h1[39m
+            [33mclass[39m=
+[32m"text-2xl sm:text-3xl 
+lg:text-4xl font-black 
+text-white mb-2 flex 
+items-center gap-3 sm:gap-4 
+italic uppercase 
+tracking-tighter"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-user 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"24"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"24"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M19 
+21v-2a4 4 0 0 0-4-4H9a4 4 0 
+0 0-4 4v2"[39m
+              [36m/>[39m
+              
+[36m<circle[39m
+                
+[33mcx[39m=[32m"12"[39m
+                
+[33mcy[39m=[32m"7"[39m
+                
+[33mr[39m=[32m"4"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Mis [0m
+            [36m<span[39m
+              [33mclass[39m
+=[32m"text-indigo-500"[39m
+            [36m>[39m
+              
+[0mBiometr├¡as[0m
+            [36m</span>[39m
+          [36m</h1>[39m
+          [36m<p[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-medium font-mono 
+text-[10px] sm:text-xs 
+uppercase 
+tracking-widest"[39m
+          [36m>[39m
+            
+[0mSincronizaci├│n de 
+par├ímetros vitales con el 
+n├║cleo AI[0m
+          [36m</p>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"grid 
+grid-cols-1 lg:grid-cols-2 
+gap-6 sm:gap-8 
+lg:gap-12"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"bg-zinc-900/60 
+backdrop-blur-2xl p-6 sm:p-8 
+rounded-2xl 
+sm:rounded-[3rem] border 
+border-white/5 shadow-2xl 
+relative overflow-hidden 
+h-fit"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"absolute top-0 left-0 
+w-full h-[1px] 
+bg-gradient-to-r 
+from-transparent 
+via-indigo-500/50 
+to-transparent"[39m
+          [36m/>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-indigo-400 
+font-black uppercase 
+text-[9px] sm:text-[10px] 
+tracking-[0.3em] 
+sm:tracking-[0.4em] mb-6 
+sm:mb-8 flex items-center 
+gap-2"[39m
+          [36m>[39m
+            [0mACTUALIZAR 
+ESTADO[0m
+          [36m</h2>[39m
+          [36m<form[39m
+            [33mclass[39m=
+[32m"space-y-5 
+sm:space-y-6"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m
+=[32m"space-y-3 
+sm:space-y-4"[39m
+            [36m>[39m
+              
+[36m<label[39m
+                
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+              [36m>[39m
+                [0mFirma 
+del Atleta[0m
+              
+[36m</label>[39m
+              
+[36m<input[39m
+                
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-bold text-sm 
+sm:text-base"[39m
+                [33mname[39
+m=[32m"full_name"[39m
+                [33mplacehol
+der[39m=[32m"Nombre 
+Completo"[39m
+                
+[33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEdad[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"age"[39m
+                  [33mplaceh
+older[39m=[32m"25"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  [0mPeso 
+(kg)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"weight"[39m
+                  [33mplaceh
+older[39m=[32m"70"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEstatura (cm)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"height"[39m
+                  [33mplaceh
+older[39m=[32m"175"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mObjetivo[0m
+                
+[36m</label>[39m
+                
+[36m<select[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none cursor-pointer 
+font-black text-[9px] 
+sm:text-[10px] 
+uppercase"[39m
+                  [33mname[
+39m=[32m"goal"[39m
+                [36m>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"salud"[39m
+                  [36m>[39m
+                    
+[0mSalud[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"hipertrofia"[39
+m
+                  [36m>[39m
+                    
+[0mM├║sculo[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"fuerza"[39m
+                  [36m>[39m
+                    
+[0mFuerza[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"definicion"[39m
+                  [36m>[39m
+                    
+[0mGrasa[0m
+                  
+[36m</option>[39m
+                
+[36m</select>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              
+[33mclass[39m=[32m"w-full 
+py-5 bg-indigo-600 
+hover:bg-indigo-500 
+text-white font-black 
+uppercase italic 
+tracking-[0.15em] 
+text-[10px] rounded-2xl 
+transition-all 
+active:scale-95 
+disabled:opacity-50 border 
+border-white/10 shadow-xl 
+shadow-indigo-600/20"[39m
+              [33mtype[39m=
+[32m"submit"[39m
+            [36m>[39m
+              [0mTRANSMITIR 
+BIOMETR├ìA[0m
+            
+[36m</button>[39m
+          [36m</form>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"space-y-6"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-black uppercase 
+text-[10px] tracking-[0.4em] 
+ml-4 flex items-center 
+gap-3"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-history 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"14"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"14"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 12a9 9 
+0 1 0 9-9 9.75 9.75 0 0 
+0-6.74 2.74L3 8"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 
+3v5h5"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M12 7v5l4 
+2"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Hist├│rico 
+de Registros[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"space-y-4 max-h-[600px] 
+overflow-y-auto pr-4 
+scrollbar-hide"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"p-10 
+border border-dashed 
+border-zinc-800 
+rounded-[2rem] 
+text-center"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[3
+9m=[32m"text-zinc-600 
+font-mono text-[10px] 
+uppercase 
+tracking-widest"[39m
+              [36m>[39m
+                [0mSin 
+registros detectados[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, 
+script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"m
+ax-w-4xl mx-auto p-3 sm:p-4 
+pb-16 sm:pb-24 
+animate-fade-up space-y-8 
+sm:space-y-12"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"flex 
+flex-col sm:flex-row 
+justify-between items-start 
+sm:items-start gap-4"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h1[39m
+            [33mclass[39m=
+[32m"text-2xl sm:text-3xl 
+lg:text-4xl font-black 
+text-white mb-2 flex 
+items-center gap-3 sm:gap-4 
+italic uppercase 
+tracking-tighter"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-user 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"24"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"24"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M19 
+21v-2a4 4 0 0 0-4-4H9a4 4 0 
+0 0-4 4v2"[39m
+              [36m/>[39m
+              
+[36m<circle[39m
+                
+[33mcx[39m=[32m"12"[39m
+                
+[33mcy[39m=[32m"7"[39m
+                
+[33mr[39m=[32m"4"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Mis [0m
+            [36m<span[39m
+              [33mclass[39m
+=[32m"text-indigo-500"[39m
+            [36m>[39m
+              
+[0mBiometr├¡as[0m
+            [36m</span>[39m
+          [36m</h1>[39m
+          [36m<p[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-medium font-mono 
+text-[10px] sm:text-xs 
+uppercase 
+tracking-widest"[39m
+          [36m>[39m
+            
+[0mSincronizaci├│n de 
+par├ímetros vitales con el 
+n├║cleo AI[0m
+          [36m</p>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"grid 
+grid-cols-1 lg:grid-cols-2 
+gap-6 sm:gap-8 
+lg:gap-12"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"bg-zinc-900/60 
+backdrop-blur-2xl p-6 sm:p-8 
+rounded-2xl 
+sm:rounded-[3rem] border 
+border-white/5 shadow-2xl 
+relative overflow-hidden 
+h-fit"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"absolute top-0 left-0 
+w-full h-[1px] 
+bg-gradient-to-r 
+from-transparent 
+via-indigo-500/50 
+to-transparent"[39m
+          [36m/>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-indigo-400 
+font-black uppercase 
+text-[9px] sm:text-[10px] 
+tracking-[0.3em] 
+sm:tracking-[0.4em] mb-6 
+sm:mb-8 flex items-center 
+gap-2"[39m
+          [36m>[39m
+            [0mACTUALIZAR 
+ESTADO[0m
+          [36m</h2>[39m
+          [36m<form[39m
+            [33mclass[39m=
+[32m"space-y-5 
+sm:space-y-6"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m
+=[32m"space-y-3 
+sm:space-y-4"[39m
+            [36m>[39m
+              
+[36m<label[39m
+                
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+              [36m>[39m
+                [0mFirma 
+del Atleta[0m
+              
+[36m</label>[39m
+              
+[36m<input[39m
+                
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-bold text-sm 
+sm:text-base"[39m
+                [33mname[39
+m=[32m"full_name"[39m
+                [33mplacehol
+der[39m=[32m"Nombre 
+Completo"[39m
+                
+[33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEdad[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"age"[39m
+                  [33mplaceh
+older[39m=[32m"25"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[90m (2)[39m
+[2m   Start at [22m 03:06:44
+[2m   Duration [22m 6.26s[2m (transform 381ms, setup 953ms, import 383ms, tests 1.28s, environment 2.99s)[22m
+
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  [0mPeso 
+(kg)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"weight"[39m
+                  [33mplaceh
+older[39m=[32m"70"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"grid 
+grid-cols-2 gap-3 
+sm:gap-4"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mEstatura (cm)[0m
+                
+[36m</label>[39m
+                
+[36m<input[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none transition-all 
+font-mono font-bold text-sm 
+sm:text-base"[39m
+                  [33mname[
+39m=[32m"height"[39m
+                  [33mplaceh
+older[39m=[32m"175"[39m
+                  [33mtype[
+39m=[32m"number"[39m
+                  
+[33mvalue[39m=[32m""[39m
+                [36m/>[39m
+              
+[36m</div>[39m
+              [36m<div[39m
+                [33mclass[3
+9m=[32m"space-y-2"[39m
+              [36m>[39m
+                
+[36m<label[39m
+                  
+[33mclass[39m=[32m"block 
+text-zinc-500 text-[9px] 
+sm:text-[10px] font-black 
+uppercase tracking-[0.2em] 
+ml-1"[39m
+                [36m>[39m
+                  
+[0mObjetivo[0m
+                
+[36m</label>[39m
+                
+[36m<select[39m
+                  
+[33mclass[39m=[32m"w-full 
+bg-black/40 border 
+border-white/5 text-white 
+rounded-xl sm:rounded-2xl 
+px-4 sm:px-5 py-3 sm:py-4 
+focus:border-indigo-500 
+outline-none cursor-pointer 
+font-black text-[9px] 
+sm:text-[10px] 
+uppercase"[39m
+                  [33mname[
+39m=[32m"goal"[39m
+                [36m>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"salud"[39m
+                  [36m>[39m
+                    
+[0mSalud[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"hipertrofia"[39
+m
+                  [36m>[39m
+                    
+[0mM├║sculo[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"fuerza"[39m
+                  [36m>[39m
+                    
+[0mFuerza[0m
+                  
+[36m</option>[39m
+                  
+[36m<option[39m
+                    [33mvalu
+e[39m=[32m"definicion"[39m
+                  [36m>[39m
+                    
+[0mGrasa[0m
+                  
+[36m</option>[39m
+                
+[36m</select>[39m
+              
+[36m</div>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              
+[33mclass[39m=[32m"w-full 
+py-5 bg-indigo-600 
+hover:bg-indigo-500 
+text-white font-black 
+uppercase italic 
+tracking-[0.15em] 
+text-[10px] rounded-2xl 
+transition-all 
+active:scale-95 
+disabled:opacity-50 border 
+border-white/10 shadow-xl 
+shadow-indigo-600/20"[39m
+              [33mtype[39m=
+[32m"submit"[39m
+            [36m>[39m
+              [0mTRANSMITIR 
+BIOMETR├ìA[0m
+            
+[36m</button>[39m
+          [36m</form>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"space-y-6"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mclass[39m=
+[32m"text-zinc-500 
+font-black uppercase 
+text-[10px] tracking-[0.4em] 
+ml-4 flex items-center 
+gap-3"[39m
+          [36m>[39m
+            [36m<svg[39m
+              
+[33mclass[39m=[32m"lucide 
+lucide-history 
+text-indigo-500"[39m
+              [33mfill[39m=
+[32m"none"[39m
+              [33mheight[39
+m=[32m"14"[39m
+              [33mstroke[39
+m=[32m"currentColor"[39m
+              [33mstroke-lin
+ecap[39m=[32m"round"[39m
+              [33mstroke-lin
+ejoin[39m=[32m"round"[39m
+              [33mstroke-wid
+th[39m=[32m"2"[39m
+              
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+              [33mwidth[39m
+=[32m"14"[39m
+              [33mxmlns[39m
+=[32m"http://www.w3.org/2000
+/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 12a9 9 
+0 1 0 9-9 9.75 9.75 0 0 
+0-6.74 2.74L3 8"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M3 
+3v5h5"[39m
+              [36m/>[39m
+              [36m<path[39m
+                
+[33md[39m=[32m"M12 7v5l4 
+2"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0m Hist├│rico 
+de Registros[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"space-y-4 max-h-[600px] 
+overflow-y-auto pr-4 
+scrollbar-hide"[39m
+          [36m>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"p-10 
+border border-dashed 
+border-zinc-800 
+rounded-[2rem] 
+text-center"[39m
+            [36m>[39m
+              [36m<p[39m
+                [33mclass[3
+9m=[32m"text-zinc-600 
+font-mono text-[10px] 
+uppercase 
+tracking-widest"[39m
+              [36m>[39m
+                [0mSin 
+registros detectados[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+[90m [2mÔØ»[22m 
+waitForWrapper node_modules/@
+testing-library/dom/dist/wait
+-for.js:[2m163:27[22m[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m86:33[2
+2m[39m
+[36m [2mÔØ»[22m src/test/P
+rofile.test.jsx:[2m72:22[22
+m[39m
+    [90m 70| [39m
+    [90m 71| [39m        
+[34mrenderProfile[39m()
+    [90m 72| [39m        
+await screen.findByText(/No 
+hay registros biomec├ínicos 
+detectaÔÇª
+    [90m   | [39m          
+           [31m^[39m
+    [90m 73| [39m    })
+    [90m 74| [39m})
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ
+»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»Ô
+Ä»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/2]Ô
+Ä»[22m[39m
+

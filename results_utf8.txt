@@ -1,0 +1,1025 @@
+﻿
+> ai-gym-trainer@0.0.0 coverage
+> vitest run --coverage
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90mC:/Users/david/OneDrive/Escritorio/gymai-proyecto/frontend/ai-gym-trainer[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+node.exe : [90mstderr[2m | 
+src/test/Layout.test.jsx[2m 
+> [22m[2mLayout 
+Component[2m > 
+[22m[2mdebe renderizar el 
+sidebar en desktop
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([90mst  
+  derr[2m...ebar en deskt   
+ op:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Ex
+ercises.test.jsx[2m > 
+[22m[2mExercises 
+Component[2m > 
+[22m[2mdebe permitir 
+editar un ejercicio existente
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [31mÔØ»[39m src/test/Exercises.test.jsx [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1790[2mms[22m[39m
+[31m     [31m├ù[31m debe permitir editar un ejercicio existente[39m[33m 1211[2mms[22m[39m
+     [32mÔ£ô[39m debe permitir eliminar un ejercicio[32m 235[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe mostrar resultados globales cuando no hay locales [33m 339[2mms[22m[39m
+ [32mÔ£ô[39m src/test/Components.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 3135[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe mostrar buscador si no hay URL [33m 493[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe manejar el flujo de guardado manual [33m 1399[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe cargar datos iniciales en modo edici├│n [33m 777[2mms[22m[39m
+ [32mÔ£ô[39m src/test/Layout.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 4368[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe renderizar el sidebar en desktop [33m 471[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe abrir y cerrar el men├║ m├│vil [33m 2759[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe cerrar el men├║ m├│vil al hacer click en un enlace [33m 1134[2mms[22m[39m
+[90mstderr[2m | src/test/Ro
+utines.test.jsx[2m > 
+[22m[2mRoutines 
+Component[2m > 
+[22m[2mdebe renderizar la 
+lista completa con d├¡as de 
+descanso y puntuaciones
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | 
+src/test/Login.test.jsx[2m 
+> [22m[2mLogin 
+Component[2m > 
+[22m[2mdebe renderizar el 
+formulario de login
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Pr
+ogressAnalysis.test.jsx[2m 
+> [22m[2mProgressAnalysis 
+Component[2m > 
+[22m[2mdebe manejar 
+diferentes estados de 
+an├ílisis (stalled, progress)
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/Routines.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 3303[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe renderizar la lista completa con d├¡as de descanso y puntuaciones [33m 3118[2mms[22m[39m
+ [32mÔ£ô[39m src/test/ProgressAnalysis.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 633[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe manejar diferentes estados de an├ílisis (stalled, progress) [33m 467[2mms[22m[39m
+[90mstderr[2m | 
+src/test/Login.test.jsx[2m 
+> [22m[2mLogin 
+Component[2m > 
+[22m[2mdebe mostrar error 
+cuando el login falla
+[22m[39mError de login: { 
+message: [32m'Invalid login 
+credentials'[39m }
+
+ [32mÔ£ô[39m src/test/Login.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 7067[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe renderizar el formulario de login [33m 2599[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir escribir en los campos de email y password [33m 722[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe llamar a signIn cuando se env├¡a el formulario [33m 1183[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe mostrar error cuando el login falla [33m 1476[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe tener un enlace a la p├ígina de registro [33m 330[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe tener un enlace para recuperar contrase├▒a [33m 710[2mms[22m[39m
+[90mstderr[2m | src/test/Hi
+story.test.jsx[2m > 
+[22m[2mHistory 
+Component[2m > 
+[22m[2mdebe permitir 
+editar un entrenamiento 
+existente
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe completar sets 
+y guardar entrenamiento
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe completar sets 
+y guardar entrenamiento
+[22m[39mNo routes matched 
+location "/rutinas" 
+
+ [32mÔ£ô[39m src/test/History.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 840[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir editar un entrenamiento existente [33m 762[2mms[22m[39m
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe mostrar error 
+si la rutina no existe
+[22m[39mError fetching 
+routine TypeError: Cannot 
+read properties of null 
+(reading 'routine_days')
+    at fetchRoutine (C:/Users
+/david/OneDrive/Escritorio/gy
+mai-proyecto/frontend/ai-gym-
+trainer/src/pages/WorkoutSess
+ion.jsx:48:22)
+
+ [32mÔ£ô[39m src/test/WorkoutSession.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 2209[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe completar sets y guardar entrenamiento [33m 450[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir abrir y cerrar el video del ejercicio [33m 316[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir ajustar peso y repeticiones [33m 1275[2mms[22m[39m
+[90mstderr[2m | src/test/AI
+Coach.test.jsx[2m > 
+[22m[2mAICoach 
+Component[2m > 
+[22m[2mdebe renderizar 
+inicialmente en modo chat
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/AICoach.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1819[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir enviar mensajes y recibir respuesta [33m 376[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir descartar una rutina generada [33m 889[2mms[22m[39m
+ [32mÔ£ô[39m src/test/AuthContext.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 329[2mms[22m[39m
+[90mstderr[2m | src/test/Tr
+ainingSelfies.test.jsx[2m > 
+[22m[2mTrainingSelfies 
+Component[2m > 
+[22m[2mdebe manejar la 
+subida de una selfie completa
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/TrainingSelfies.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 787[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe manejar la subida de una selfie completa [33m 650[2mms[22m[39m
+[90mstderr[2m | src/test/Da
+shboard.test.jsx[2m > 
+[22m[2mDashboard 
+Component[2m > 
+[22m[2mdebe calcular 
+correctamente las 
+estad├¡sticas de sesiones
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Da
+shboard.test.jsx[2m > 
+[22m[2mDashboard 
+Component[2m > 
+[22m[2mdebe calcular 
+correctamente las 
+estad├¡sticas de sesiones
+[22m[39mWarning: The tag 
+<stop> is unrecognized in 
+this browser. If you meant 
+to render a React component, 
+start its name with an 
+uppercase letter.
+    at stop
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: <linearGradient /> 
+is using incorrect casing. 
+Use PascalCase for React 
+components, or lowercase for 
+HTML elements.
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: The tag 
+<linearGradient> is 
+unrecognized in this 
+browser. If you meant to 
+render a React component, 
+start its name with an 
+uppercase letter.
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: The tag <defs> is 
+unrecognized in this 
+browser. If you meant to 
+render a React component, 
+start its name with an 
+uppercase letter.
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+
+[90mstderr[2m | src/test/Pr
+ofile.test.jsx[2m > 
+[22m[2mProfile Component 
+Extended[2m > [22m[2mdebe 
+manejar cambios en inputs y 
+errores de guardado
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/Dashboard.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1344[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe calcular correctamente las estad├¡sticas de sesiones [33m 736[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe manejar errores al cargar estad├¡sticas [33m 603[2mms[22m[39m
+ [32mÔ£ô[39m src/test/Profile.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1207[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe manejar cambios en inputs y errores de guardado [33m 1092[2mms[22m[39m
+ [32mÔ£ô[39m src/test/api.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mÔ£ô[39m src/test/videoService.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+
+[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3
+9m[1m[41m Failed Tests 1 [
+49m[22m[31mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»Ô
+Ä»ÔÄ»[39m
+
+[41m[1m FAIL [22m[49m src
+/test/Exercises.test.jsx[2m 
+> [22mExercises 
+Component[2m > [22mdebe 
+permitir editar un ejercicio 
+existente
+[31m[1mTestingLibraryElemen
+tError[22m[39m: Found 
+multiple elements with the 
+text: /Protocolo/i
+
+Here are the matching 
+elements:
+
+Ignored nodes: comments, 
+script, style
+[36m<p[39m
+  [33mclass[39m=[32m"text-
+xs text-zinc-500 
+leading-relaxed italic mb-8 
+line-clamp-3"[39m
+[36m>[39m
+  [0m"[0m
+  [0mSin protocolo de 
+ejecuci├│n definido por el 
+coach.[0m
+  [0m"[0m
+[36m</p>[39m
+
+Ignored nodes: comments, 
+script, style
+[36m<span[39m
+  [33mclass[39m=[32m"text-
+indigo-500"[39m
+[36m>[39m
+  [0mProtocolo[0m
+[36m</span>[39m
+
+(If this is intentional, 
+then use the `*AllBy*` 
+variant of the query (like 
+`queryAllByText`, 
+`getAllByText`, or 
+`findAllByText`)).
+
+Ignored nodes: comments, 
+script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"m
+ax-w-7xl mx-auto p-4 
+lg:p-8"[39m
+    [36m>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"flex 
+flex-col md:flex-row 
+justify-between items-start 
+md:items-center mb-10 
+gap-6"[39m
+      [36m>[39m
+        [36m<div>[39m
+          [36m<h1[39m
+            [33mclass[39m=
+[32m"text-4xl font-black 
+text-white tracking-tight 
+mb-2 uppercase italic"[39m
+          [36m>[39m
+            [0mEntrena [0m
+            [36m<span[39m
+              [33mclass[39m
+=[32m"text-indigo-500"[39m
+            [36m>[39m
+              
+[0mCorrecto[0m
+            [36m</span>[39m
+            [0m y obten 
+mejores ganancias[0m
+          [36m</h1>[39m
+        [36m</div>[39m
+        [36m<button[39m
+          
+[33mclass[39m=[32m"flex 
+items-center gap-4 px-8 py-4 
+bg-indigo-600 
+hover:bg-indigo-500 
+text-white rounded-2xl 
+font-black uppercase italic 
+tracking-widest 
+transition-all shadow-lg 
+shadow-indigo-500/20 
+active:scale-95"[39m
+        [36m>[39m
+          [36m<svg[39m
+            
+[33mclass[39m=[32m"lucide 
+lucide-plus "[39m
+            [33mfill[39m=[
+32m"none"[39m
+            [33mheight[39m=
+[32m"20"[39m
+            [33mstroke[39m=
+[32m"currentColor"[39m
+            [33mstroke-linec
+ap[39m=[32m"round"[39m
+            [33mstroke-linej
+oin[39m=[32m"round"[39m
+            [33mstroke-width
+[39m=[32m"2"[39m
+            
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+            [33mwidth[39m=
+[32m"20"[39m
+            [33mxmlns[39m=
+[32m"http://www.w3.org/2000/s
+vg"[39m
+          [36m>[39m
+            [36m<path[39m
+              
+[33md[39m=[32m"M5 
+12h14"[39m
+            [36m/>[39m
+            [36m<path[39m
+              
+[33md[39m=[32m"M12 
+5v14"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+          [0m AGREGAR 
+EJERCICIO MAS TUTORIAL[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"mb-12 
+group"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[3
+2m"relative max-w-3xl 
+mx-auto"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"absolute inset-0 
+bg-indigo-600/10 blur-xl grou
+p-focus-within:bg-indigo-600/
+20 transition-all 
+rounded-3xl"[39m
+          [36m/>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"relative bg-zinc-900/40 
+backdrop-blur-xl border 
+border-white/5 
+rounded-[2rem] flex 
+items-center p-2 shadow-2xl g
+roup-focus-within:border-indi
+go-500/30 
+transition-all"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m
+=[32m"p-4"[39m
+            [36m>[39m
+              [36m<svg[39m
+                
+[33mclass[39m=[32m"lucide 
+lucide-search text-zinc-600 g
+roup-focus-within:text-indigo
+-400 transition-colors"[39m
+                [33mfill[39
+m=[32m"none"[39m
+                [33mheight[
+39m=[32m"24"[39m
+                [33mstroke[
+39m=[32m"currentColor"[39m
+                [33mstroke-l
+inecap[39m=[32m"round"[39m
+                [33mstroke-l
+inejoin[39m=[32m"round"[39
+m
+                [33mstroke-w
+idth[39m=[32m"2"[39m
+                
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+                [33mwidth[3
+9m=[32m"24"[39m
+                [33mxmlns[3
+9m=[32m"http://www.w3.org/20
+00/svg"[39m
+              [36m>[39m
+                
+[36m<circle[39m
+                  
+[33mcx[39m=[32m"11"[39m
+                  
+[33mcy[39m=[32m"11"[39m
+                  
+[33mr[39m=[32m"8"[39m
+                [36m/>[39m
+                
+[36m<path[39m
+                  
+[33md[39m=[32m"m21 
+21-4.3-4.3"[39m
+                [36m/>[39m
+              
+[36m</svg>[39m
+            [36m</div>[39m
+            [36m<input[39m
+              
+[33mclass[39m=[32m"flex-1 
+bg-transparent text-white 
+px-4 py-4 outline-none 
+font-bold placeholder:text-zi
+nc-700"[39m
+              [33mplaceholde
+r[39m=[32m"Buscar por 
+nombre, m├║sculo o 
+equipo..."[39m
+              [33mtype[39m=
+[32m"text"[39m
+              
+[33mvalue[39m=[32m""[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        
+[33mclass[39m=[32m"grid 
+grid-cols-1 md:grid-cols-2 
+lg:grid-cols-3 
+xl:grid-cols-4 gap-8"[39m
+      [36m>[39m
+        [36m<div[39m
+          
+[33mclass[39m=[32m"group 
+bg-zinc-900/40 
+backdrop-blur-md border 
+border-white/5 p-8 
+rounded-[2.5rem] 
+hover:border-indigo-500/30 
+transition-all relative 
+overflow-hidden flex 
+flex-col justify-between 
+h-full"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=
+[32m"absolute top-0 right-0 
+w-24 h-24 bg-indigo-500/5 
+blur-3xl rounded-full 
+opacity-0 
+group-hover:opacity-100 
+transition-opacity"[39m
+          [36m/>[39m
+          [36m<div>[39m
+            [36m<div[39m
+              
+[33mclass[39m=[32m"flex 
+justify-between items-start 
+mb-6"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[3
+9m=[32m"text-[9px] 
+font-black px-3 py-1.5 
+bg-indigo-500/10 
+text-indigo-400 rounded-full 
+border border-indigo-500/20 
+uppercase 
+tracking-widest"[39m
+              [36m>[39m
+                [0mPecho[0m
+              
+[36m</span>[39m
+              [36m<div[39m
+                
+[33mclass[39m=[32m"flex 
+gap-2"[39m
+              [36m>[39m
+                
+[36m<button[39m
+                  [33mclass
+[39m=[32m"relative z-20 p-2 
+text-zinc-700 
+hover:text-indigo-500 
+transition-all 
+active:scale-90"[39m
+                  
+[33mtitle[39m=[32m"Editar 
+ejercicio"[39m
+                [36m>[39m
+                  
+[36m<svg[39m
+                    
+[33mclass[39m=[32m"lucide 
+lucide-pen-line "[39m
+                    [33mfill
+[39m=[32m"none"[39m
+                    [33mheig
+ht[39m=[32m"18"[39m
+                    [33mstro
+ke[39m=[32m"currentColor"[
+39m
+                    [33mstro
+ke-linecap[39m=[32m"round"
+[39m
+                    [33mstro
+ke-linejoin[39m=[32m"round"
+[39m
+                    [33mstro
+ke-width[39m=[32m"2"[39m
+                    
+[33mviewBox[39m=[32m"0 0 
+24 24"[39m
+                    [33mwidt
+h[39m=[32m"18"[39m
+                    [33mxmln
+s[39m=[32m"http://www.w3.or
+g/2000/svg"[39m
+                  [36m>[39m
+                    
+[36m<path[39m
+                      
+[33md[39m=[32m"M12 
+20h9"[39m
+                    
+[36m/>[39m
+                    
+[36m<path[39m
+                      
+[33md[39m=[32m"M16.5 
+3.5a2.12 2.12 0 0 1 3 3L7 
+19l-4 1 1-4Z"[39m
+                    
+[36m/>[39m
+                  
+[36m</svg>[39m
+                
+[36m</button>[39m
+                
+[36m<button[39m
+                  [33mclass
+[39m=[32m"relative z-20 p-2 
+text-zinc-700 
+hover:text-red-500 
+transition-all 
+active:scale-90"[39m
+                  [33mtitle
+[39m=[32m"Eliminar 
+ejercicio"[39m
+                [36m>[39m
+                  
+[36m<svg[39m
+                    
+[33mclass[39m=[32m"lucide 
+lucide-tra...
+[90m [2mÔØ»[22m 
+Object.getElementError node_m
+odules/@testing-library/dom/d
+ist/config.js:[2m37:19[22m
+[39m
+[90m [2mÔØ»[22m 
+getElementError node_modules/
+@testing-library/dom/dist/que
+ry-helpers.js:[2m20:35[22m
+[39m
+[90m [2mÔØ»[22m getMultipl
+eElementsFoundError node_modu
+les/@testing-library/dom/dist
+/query-helpers.js:[2m23:10[
+22m[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m55:13[2
+2m[39m
+[90m [2mÔØ»[22m node_modul
+es/@testing-library/dom/dist/
+query-helpers.js:[2m95:19[2
+2m[39m
+[36m [2mÔØ»[22m src/test/E
+xercises.test.jsx:[2m46:23[
+22m[39m
+    [90m 44| [39m        
+[90m// Usamos regex 
+flexible para ignorar 
+spans[39m
+    [90m 45| [39m        [
+34mexpect[39m(screen[33m.[
+39m[34mgetByText[39m([36m/
+Editar/i[39m))[33m.[39m[3
+4mtoBeInTheDocument[39m()
+    [90m 46| [39m        [
+34mexpect[39m(screen[33m.[
+39m[34mgetByText[39m([36m/
+Protocolo/i[39m))[33m.[39m
+[34mtoBeInTheDocument[39m()
+    [90m   | [39m          
+            [31m^[39m
+    [90m 47| [39m
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m14 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m53 passed[39m[22m[90m (54)[39m
+[2m   Start at [22m 03:33:44
+[2m   Duration [22m 56.19s[2m (transform 8.51s, setup 18.53s, import 16.57s, tests 28.87s, environment 69.43s)[22m
+
+    [90m 48| [39m        
+[35mconst[39m nameInput 
+[33m=[39m screen[33m.[39m
+[34mgetByDisplayValue[39m(
+[32m'Press'[39m)
+
+[31m[2mÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ
+»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»Ô
+Ä»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/1]Ô
+Ä»[22m[39m
+

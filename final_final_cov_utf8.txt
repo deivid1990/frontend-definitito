@@ -1,0 +1,617 @@
+﻿
+> ai-gym-trainer@0.0.0 coverage
+> vitest run --coverage
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90mC:/Users/david/OneDrive/Escritorio/gymai-proyecto/frontend/ai-gym-trainer[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+node.exe : [90mstderr[2m | 
+src/test/Layout.test.jsx[2m 
+> [22m[2mLayout 
+Component[2m > 
+[22m[2mdebe renderizar el 
+sidebar en desktop
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([90mst  
+  derr[2m...ebar en deskt   
+ op:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe completar sets 
+y guardar entrenamiento
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe completar sets 
+y guardar entrenamiento
+[22m[39mNo routes matched 
+location "/rutinas" 
+
+[90mstderr[2m | src/test/Wo
+rkoutSession.test.jsx[2m > 
+[22m[2mWorkoutSession 
+Component[2m > 
+[22m[2mdebe mostrar error 
+si la rutina no existe
+[22m[39mError fetching 
+routine TypeError: Cannot 
+read properties of null 
+(reading 'routine_days')
+    at fetchRoutine (C:/Users
+/david/OneDrive/Escritorio/gy
+mai-proyecto/frontend/ai-gym-
+trainer/src/pages/WorkoutSess
+ion.jsx:48:22)
+
+[90mstderr[2m | 
+src/test/Login.test.jsx[2m 
+> [22m[2mLogin 
+Component[2m > 
+[22m[2mdebe renderizar el 
+formulario de login
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/WorkoutSession.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1338[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe completar sets y guardar entrenamiento [33m 673[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir ajustar peso y repeticiones [33m 449[2mms[22m[39m
+ [32mÔ£ô[39m src/test/Layout.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1600[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe abrir y cerrar el men├║ m├│vil [33m 1136[2mms[22m[39m
+[90mstderr[2m | 
+src/test/Login.test.jsx[2m 
+> [22m[2mLogin 
+Component[2m > 
+[22m[2mdebe mostrar error 
+cuando el login falla
+[22m[39mError de login: { 
+message: [32m'Invalid login 
+credentials'[39m }
+
+ [32mÔ£ô[39m src/test/Login.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 4016[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe renderizar el formulario de login [33m 993[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir escribir en los campos de email y password [33m 686[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe llamar a signIn cuando se env├¡a el formulario [33m 1014[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe mostrar error cuando el login falla [33m 1073[2mms[22m[39m
+[90mstderr[2m | src/test/Ex
+ercises.test.jsx[2m > 
+[22m[2mExercises 
+Component[2m > 
+[22m[2mdebe permitir 
+editar un ejercicio existente
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/Exercises.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1208[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir editar un ejercicio existente [33m 1022[2mms[22m[39m
+ [32mÔ£ô[39m src/test/Components.test.jsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1348[2mms[22m[39m
+       [33m[2mÔ£ô[22m[39m debe manejar el flujo de guardado manual [33m 949[2mms[22m[39m
+[90mstderr[2m | src/test/AI
+Coach.test.jsx[2m > 
+[22m[2mAICoach 
+Component[2m > 
+[22m[2mdebe renderizar 
+inicialmente en modo chat
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/AICoach.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 502[2mms[22m[39m
+[90mstderr[2m | src/test/Ro
+utines.test.jsx[2m > 
+[22m[2mRoutines 
+Component[2m > 
+[22m[2mdebe renderizar la 
+lista completa con d├¡as de 
+descanso y puntuaciones
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/Routines.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 601[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe renderizar la lista completa con d├¡as de descanso y puntuaciones [33m 433[2mms[22m[39m
+[90mstderr[2m | src/test/Da
+shboard.test.jsx[2m > 
+[22m[2mDashboard 
+Component[2m > 
+[22m[2mdebe calcular 
+correctamente las 
+estad├¡sticas de sesiones
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+[90mstderr[2m | src/test/Da
+shboard.test.jsx[2m > 
+[22m[2mDashboard 
+Component[2m > 
+[22m[2mdebe calcular 
+correctamente las 
+estad├¡sticas de sesiones
+[22m[39mWarning: The tag 
+<stop> is unrecognized in 
+this browser. If you meant 
+to render a React component, 
+start its name with an 
+uppercase letter.
+    at stop
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: <linearGradient /> 
+is using incorrect casing. 
+Use PascalCase for React 
+components, or lowercase for 
+HTML elements.
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: The tag 
+<linearGradient> is 
+unrecognized in this 
+browser. If you meant to 
+render a React component, 
+start its name with an 
+uppercase letter.
+    at linearGradient
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+Warning: The tag <defs> is 
+unrecognized in this 
+browser. If you meant to 
+render a React component, 
+start its name with an 
+uppercase letter.
+    at defs
+    at div
+    at AreaChart (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/test/Dashboard.test.
+jsx:13:17)
+    at div
+    at ResponsiveContainer (C
+:/Users/david/OneDrive/Escrit
+orio/gymai-proyecto/frontend/
+ai-gym-trainer/src/test/Dashb
+oard.test.jsx:8:27)
+    at div
+    at div
+    at div
+    at div
+    at Dashboard (C:/Users/da
+vid/OneDrive/Escritorio/gymai
+-proyecto/frontend/ai-gym-tra
+iner/src/pages/Dashboard.jsx:
+17:53)
+    at Router (C:\Users\david
+\OneDrive\Escritorio\gymai-pr
+oyecto\frontend\ai-gym-traine
+r\node_modules\react-router\d
+ist\umd\react-router.developm
+ent.js:1207:17)
+    at MemoryRouter (C:\Users
+\david\OneDrive\Escritorio\gy
+mai-proyecto\frontend\ai-gym-
+trainer\node_modules\react-ro
+uter\dist\umd\react-router.de
+velopment.js:1101:7)
+
+ [32mÔ£ô[39m src/test/Dashboard.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 414[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe calcular correctamente las estad├¡sticas de sesiones [33m 331[2mms[22m[39m
+[90mstderr[2m | src/test/Hi
+story.test.jsx[2m > 
+[22m[2mHistory 
+Component[2m > 
+[22m[2mdebe permitir 
+editar un entrenamiento 
+existente
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/History.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 407[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m debe permitir editar un entrenamiento existente [33m 367[2mms[22m[39m
+[90mstderr[2m | src/test/Pr
+ogressAnalysis.test.jsx[2m 
+> [22m[2mProgressAnalysis 
+Component[2m > 
+[22m[2mdebe manejar 
+diferentes estados de 
+an├ílisis (stalled, progress)
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/ProgressAnalysis.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 356[2mms[22m[39m
+[90mstderr[2m | src/test/Tr
+ainingSelfies.test.jsx[2m > 
+[22m[2mTrainingSelfies 
+Component[2m > 
+[22m[2mdebe manejar la 
+subida de una selfie completa
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/TrainingSelfies.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 328[2mms[22m[39m
+[90mstderr[2m | src/test/Pr
+ofile.test.jsx[2m > 
+[22m[2mProfile Component 
+Extended[2m > [22m[2mdebe 
+manejar cambios en inputs y 
+errores de guardado
+[22m[39mÔÜá´©Å React 
+Router Future Flag Warning: 
+React Router will begin 
+wrapping state updates in 
+`React.startTransition` in 
+v7. You can use the 
+`v7_startTransition` future 
+flag to opt-in early. For 
+more information, see https:/
+/reactrouter.com/v6/upgrading
+/future#v7_starttransition.
+ÔÜá´©Å React Router Future 
+Flag Warning: Relative route 
+resolution within Splat 
+routes is changing in v7. 
+You can use the 
+`v7_relativeSplatPath` 
+future flag to opt-in early. 
+For more information, see htt
+ps://reactrouter.com/v6/upgra
+ding/future#v7_relativesplatp
+ath.
+
+ [32mÔ£ô[39m src/test/Profile.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[32m 241[2mms[22m[39m
+ [32mÔ£ô[39m src/test/AuthContext.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 127[2mms[22m[39m
+ [32mÔ£ô[39m src/test/api.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mÔ£ô[39m src/test/videoService.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m15 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[32m54 passed[39m[22m[90m (54)[39m
+[2m   Start at [22m 03:38:45
+[2m   Duration [22m 28.52s[2m (transform 1.93s, setup 10.43s, import 5.95s, tests 12.51s, environment 39.76s)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   78.46 |    70.84 |   72.36 |   81.39 |                   
+ components        |   84.93 |    79.77 |   80.76 |   83.82 |                   
+  ConfirmModal.jsx |     100 |       75 |     100 |     100 | 27-30             
+  ...ciseVideo.jsx |   68.75 |    58.33 |     100 |   64.28 | 13-18             
+  Layout.jsx       |   92.85 |      100 |    87.5 |   92.85 | 97                
+  ...koutModal.jsx |   90.32 |    80.85 |      80 |      90 | 60,102,146        
+  ...maryModal.jsx |   77.77 |       75 |      60 |      75 | 44-71             
+ context           |   83.33 |      100 |   63.63 |    82.6 |                   
+  AuthContext.jsx  |   83.33 |      100 |   63.63 |    82.6 | 32,34-38          
+ lib               |   78.04 |    61.53 |   71.42 |   81.08 |                   
+  api.js           |   77.77 |    59.09 |   71.42 |   81.25 | 30,38-41,55       
+  ...baseClient.js |      80 |       75 |     100 |      80 | 7                 
+ pages             |    77.1 |    68.71 |   70.94 |   80.27 |                   
+  AICoach.jsx      |   71.42 |    71.73 |    64.7 |   73.84 | ...95,120,128,228 
+  Dashboard.jsx    |   97.67 |       70 |     100 |     100 | 18-36             
+  Exercises.jsx    |    71.6 |    66.66 |   59.25 |   76.71 | ...67-290,331-381 
+  History.jsx      |      66 |    60.71 |      60 |   67.39 | ...78,141-169,192 
+  Login.jsx        |      88 |       75 |     100 |    87.5 | 31-34             
+  Profile.jsx      |   58.82 |    52.38 |   46.15 |      65 | ...26-137,265-299 
+  ...sAnalysis.jsx |   83.33 |    78.26 |   85.71 |   86.95 | 24-25,37          
+  Routines.jsx     |   93.33 |     86.2 |   86.66 |   95.23 | 156,225           
+  ...ngSelfies.jsx |   72.85 |    69.44 |    62.5 |   79.03 | ...12,151-201,253 
+  ...utSession.jsx |   87.95 |       70 |   84.61 |   88.15 | ...92,118,233,256 
+ services          |   84.37 |    68.75 |   85.71 |   96.15 |                   
+  videoService.js  |   84.37 |    68.75 |   85.71 |   96.15 | 128               
+-------------------|---------|----------|---------|---------|-------------------
