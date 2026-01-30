@@ -45,7 +45,7 @@ export default function WorkoutSession() {
             const data = await api.get(`/api/rutinas/${routineId}`)
             setRoutine(data)
 
-            if (data.routine_days && data.routine_days.length > 0) {
+            if (data && data.routine_days && data.routine_days.length > 0) {
                 // Buscamos el día por el dayNumber de la URL, o el primero por defecto
                 let selectedDay = data.routine_days[0]
                 if (dayNumber) {

@@ -30,6 +30,7 @@ const renderWithRouter = (routineId = '1', dayNumber = '1') => {
             <AuthContext.Provider value={mockAuthContext}>
                 <Routes>
                     <Route path="/entrenar/:routineId/:dayNumber" element={<WorkoutSession />} />
+                    <Route path="/rutinas" element={<div>Rutinas</div>} />
                 </Routes>
             </AuthContext.Provider>
         </MemoryRouter>

@@ -27,7 +27,7 @@ describe('ForgotPassword Component', () => {
 
     it('debe renderizar el formulario correctamente', () => {
         renderForgotPassword()
-        expect(screen.getByText(/Recuperar Acceso/i)).toBeInTheDocument()
+        expect(screen.getByRole('heading', { name: /Recuperar Acceso/i })).toBeInTheDocument()
         expect(screen.getByPlaceholderText(/usuario@sistema.com/i)).toBeInTheDocument()
     })
 

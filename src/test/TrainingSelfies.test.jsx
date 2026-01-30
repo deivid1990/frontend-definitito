@@ -40,10 +40,11 @@ describe('TrainingSelfies Component', () => {
         }
         supabase.from.mockReturnValue({ select: () => mockSelect })
 
-        // Default mock for storage
+        // Default mock for storage (incl. remove para limpieza en catch)
         supabase.storage.from.mockReturnValue({
             upload: vi.fn().mockResolvedValue({ error: null }),
-            getPublicUrl: vi.fn().mockReturnValue({ data: { publicUrl: 'http://test.com/img.png' } })
+            getPublicUrl: vi.fn().mockReturnValue({ data: { publicUrl: 'http://test.com/img.png' } }),
+            remove: vi.fn().mockResolvedValue({ error: null })
         })
     })
 
@@ -95,7 +96,8 @@ describe('TrainingSelfies Component', () => {
         fireEvent.change(container.querySelector('input[type="file"]'), { target: { files: [file] } })
 
         supabase.storage.from.mockReturnValue({
-            upload: vi.fn().mockResolvedValue({ error: new Error('Upload error') })
+            upload: vi.fn().mockResolvedValue({ error: new Error('Upload error') }),
+            remove: vi.fn().mockResolvedValue({ error: null })
         })
 
         fireEvent.click(screen.getByText(/SINCRONIZAR/i))

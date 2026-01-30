@@ -38,7 +38,7 @@ describe('Register Component', () => {
 
     it('debe renderizar el formulario de registro correctamente', () => {
         renderRegister()
-        expect(screen.getByText(/Nueva Identidad/i)).toBeInTheDocument()
+        expect(screen.getByRole('heading', { name: /Nueva Identidad/i })).toBeInTheDocument()
         expect(screen.getByPlaceholderText(/JUAN PÉREZ/i)).toBeInTheDocument()
         expect(screen.getByPlaceholderText(/USUARIO@SISTEMA.COM/i)).toBeInTheDocument()
         expect(screen.getByPlaceholderText(/••••••••/i)).toBeInTheDocument()

@@ -12,12 +12,12 @@ vi.mock('../lib/supabaseClient', () => ({
     }
 }))
 
-// Mock recharts
+// Mock recharts (evitar renderizar SVG/defs que generan warnings en jsdom)
 vi.mock('recharts', () => ({
-    ResponsiveContainer: ({ children }) => <div>{children}</div>,
-    AreaChart: ({ children }) => <div>{children}</div>,
-    Area: () => <div />,
-    Tooltip: () => <div />,
+    ResponsiveContainer: ({ children }) => <div data-testid="responsive-container">{children}</div>,
+    AreaChart: () => <div data-testid="area-chart" />,
+    Area: () => null,
+    Tooltip: () => null,
 }))
 
 const mockAuthContext = {
