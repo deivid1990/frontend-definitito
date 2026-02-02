@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { api } from '../lib/api'
 import { useAuth } from '../context/AuthContext'
-import { TrendingUp, Activity, AlertCircle, CheckCircle, ArrowRight, Search, PlayCircle, Sparkles } from 'lucide-react'
+import { TrendingUp, Activity, AlertCircle, ArrowRight, Search, PlayCircle } from 'lucide-react'
 import ExerciseVideo from '../components/ExerciseVideo'
 import { searchGlobalExercises, getYoutubeUrl } from '../services/videoService'
 
@@ -31,7 +31,7 @@ export default function ProgressAnalysis() {
     if (authLoading) return <div className="p-8 text-center text-slate-500">Cargando usuario...</div>
 
     return (
-        <div className="max-w-4xl mx-auto space-y-10 pb-20">
+        <div data-testid="progress-page" className="max-w-4xl mx-auto space-y-10 pb-20">
             <ExerciseVideo
                 isOpen={videoModal.isOpen}
                 onClose={() => setVideoModal({ ...videoModal, isOpen: false })}
@@ -41,11 +41,16 @@ export default function ProgressAnalysis() {
 
             <div className="flex items-center gap-4">
                 <TrendingUp className="text-[#00ff88]" size={28} />
-                <h1 className="text-4xl font-black text-white uppercase italic tracking-tighter">Análisis de Progreso</h1>
+                <h1
+                    data-testid="progress-title"
+                    className="text-4xl font-black text-white uppercase italic tracking-tighter"
+                >
+                    Análisis de Progreso
+                </h1>
             </div>
             <p className="text-zinc-500 font-medium -mt-6 ml-11">Deja que la IA analice tu historial y optimice tu plan.</p>
 
-            {/* ACTION CARD (Exactamente como la imagen) */}
+            {/* ACTION CARD */}
             <div className="bg-[#0f0f12] border border-white/5 rounded-[2.5rem] p-12 text-center shadow-2xl relative overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent"></div>
 
@@ -73,11 +78,10 @@ export default function ProgressAnalysis() {
                 </div>
             )}
 
-            {/* RESULTS SECTION - PIXEL PERFECT TO SCREENSHOT */}
+            {/* RESULTS SECTION */}
             {analysis && (
                 <div className="space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
-
-                    {/* Tarjeta de Estado (Cápsula Azul/Indigo) */}
+                    {/* Tarjeta de Estado */}
                     <div className="bg-gradient-to-r from-[#1a1a2e] to-[#0f0f12] p-6 rounded-[3rem] border border-indigo-500/20 flex items-center gap-8 shadow-2xl relative overflow-hidden">
                         <div className="w-12 h-12 bg-indigo-500 rounded-full flex-shrink-0 shadow-[0_0_20px_rgba(79,70,229,0.4)]"></div>
                         <div>
@@ -89,7 +93,7 @@ export default function ProgressAnalysis() {
                         </div>
                     </div>
 
-                    {/* Tarjeta de Seguridad (Cápsula Roja) */}
+                    {/* Tarjeta de Seguridad */}
                     <div className="bg-[#1a0f0f] p-6 rounded-[2.5rem] border border-red-500/20 flex items-center gap-8 shadow-2xl">
                         <div className="w-12 h-12 bg-red-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(239,68,68,0.4)]">
                             <AlertCircle className="text-white" size={24} />
@@ -102,7 +106,7 @@ export default function ProgressAnalysis() {
                         </div>
                     </div>
 
-                    {/* Log de Sistema (Original) */}
+                    {/* Log de Sistema */}
                     <div className="bg-[#09090b] p-8 rounded-[2rem] border border-white/5 relative overflow-hidden">
                         <div className="flex items-center gap-3 mb-6">
                             <Activity className="text-indigo-500" size={16} />
@@ -135,10 +139,12 @@ export default function ProgressAnalysis() {
                 </div>
             )}
 
-            {/* SECCIÓN DE BIBLIOTECA (Mantener el buscador por utilidad) */}
+            {/* SECCIÓN DE BIBLIOTECA */}
             <div className="pt-16 border-t border-white/5">
                 <div className="mb-8 pl-2">
-                    <h2 className="text-2xl font-black text-white uppercase italic tracking-tighter">Motor de <span className="text-indigo-500">Videos</span></h2>
+                    <h2 className="text-2xl font-black text-white uppercase italic tracking-tighter">
+                        Motor de <span className="text-indigo-500">Videos</span>
+                    </h2>
                     <p className="text-zinc-600 font-bold text-xs mt-1 italic">Consulta técnica instantánea en español.</p>
                 </div>
 
@@ -178,3 +184,4 @@ export default function ProgressAnalysis() {
         </div>
     )
 }
+

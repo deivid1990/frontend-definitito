@@ -194,7 +194,13 @@ export default function Dashboard() {
                         <p className="text-indigo-100 mb-6 sm:mb-8 max-w-xs leading-relaxed text-sm sm:text-base">
                             Analizando tus datos... Tu fuerza ha subido un 5%. ¿Listo para una rutina de potencia?
                         </p>
-                        <Link to="/coach" className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest hover:bg-indigo-50 transition-all flex items-center justify-center gap-2 sm:gap-3 w-fit">
+
+                        {/* ✅ CAMBIO AQUI: data-testid agregado */}
+                        <Link
+                            to="/coach"
+                            data-testid="nav-ai-coach"
+                            className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-black text-xs sm:text-sm uppercase tracking-widest hover:bg-indigo-50 transition-all flex items-center justify-center gap-2 sm:gap-3 w-fit"
+                        >
                             <PlusCircle size={18} className="sm:w-5 sm:h-5" /> Generar Entrenamiento
                         </Link>
                     </div>

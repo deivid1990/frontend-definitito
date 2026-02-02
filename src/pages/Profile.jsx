@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import { useAuth } from '../context/AuthContext'
-import { User, Save, Loader2, Target, Ruler, Weight, CheckCircle, History, X } from 'lucide-react'
+import { User, Loader2, CheckCircle, History, X } from 'lucide-react'
 import ConfirmModal from '../components/ConfirmModal'
 
 export default function Profile() {
@@ -21,12 +21,12 @@ export default function Profile() {
     const [history, setHistory] = useState([])
     const [deleteModal, setDeleteModal] = useState({ isOpen: false, id: null })
 
-    // Cargar perfil e historial al montar el componente
     useEffect(() => {
         if (user) {
             getProfile()
             fetchHistory()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user])
 
     const fetchHistory = async () => {
@@ -85,7 +85,6 @@ export default function Profile() {
             setSaving(true)
             setShowSuccess(false)
 
-            // 1. Actualizar Perfil Principal
             const updates = {
                 id: user.id,
                 full_name: profile.full_name,
@@ -99,7 +98,6 @@ export default function Profile() {
             const { error: profileError } = await supabase.from('profiles').upsert(updates)
             if (profileError) throw profileError
 
-            // 2. Guardar en Historial
             const historyEntry = {
                 user_id: user.id,
                 weight: profile.weight,
@@ -108,8 +106,8 @@ export default function Profile() {
                 fitness_level: profile.fitness_level,
                 goal: profile.goal
             }
+
             const { error: historyError } = await supabase.from('biometric_history').insert([historyEntry])
-            // No bloqueamos el flujo si el historial falla, pero lo logueamos
             if (historyError) console.error('Error guardando historial:', historyError)
 
             setShowSuccess(true)
@@ -149,11 +147,16 @@ export default function Profile() {
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 flex items-center gap-3 sm:gap-4 italic uppercase tracking-tighter">
                         <User className="text-indigo-500" size={24} /> Mis <span className="text-indigo-500">Biometrías</span>
                     </h1>
-                    <p className="text-zinc-500 font-medium font-mono text-[10px] sm:text-xs uppercase tracking-widest">Sincronización de parámetros vitales con el núcleo AI</p>
+                    <p className="text-zinc-500 font-medium font-mono text-[10px] sm:text-xs uppercase tracking-widest">
+                        Sincronización de parámetros vitales con el núcleo AI
+                    </p>
                 </div>
 
                 {showSuccess && (
-                    <div className="bg-emerald-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-black text-[9px] sm:text-[10px] uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-in zoom-in slide-in-from-right-10 flex items-center gap-2 sm:gap-3">
+                    <div
+                        data-testid="profile-success"
+                        className="bg-emerald-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl font-black text-[9px] sm:text-[10px] uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-in zoom-in slide-in-from-right-10 flex items-center gap-2 sm:gap-3"
+                    >
                         <CheckCircle size={16} className="sm:w-[18px] sm:h-[18px]" /> ¡REGISTRO EXITOSO!
                     </div>
                 )}
@@ -166,7 +169,7 @@ export default function Profile() {
                 </div>
             ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-                    {/* FORMULARIO DE ACTUALIZACIÓN */}
+                    {/* FORMULARIO */}
                     <div className="bg-zinc-900/60 backdrop-blur-2xl p-6 sm:p-8 rounded-2xl sm:rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden h-fit">
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
 
@@ -176,7 +179,9 @@ export default function Profile() {
 
                         <form onSubmit={updateProfile} className="space-y-5 sm:space-y-6">
                             <div className="space-y-3 sm:space-y-4">
-                                <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">Firma del Atleta</label>
+                                <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
+                                    Firma del Atleta
+                                </label>
                                 <input
                                     name="full_name"
                                     data-testid="input-name"
@@ -189,10 +194,13 @@ export default function Profile() {
 
                             <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                 <div className="space-y-2">
-                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">Edad</label>
+                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
+                                        Edad
+                                    </label>
                                     <input
                                         type="number"
                                         name="age"
+                                        data-testid="input-age"
                                         value={profile.age}
                                         onChange={handleChange}
                                         className="w-full bg-black/40 border border-white/5 text-white rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 sm:py-4 focus:border-indigo-500 outline-none transition-all font-mono font-bold text-sm sm:text-base"
@@ -200,7 +208,9 @@ export default function Profile() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">Peso (kg)</label>
+                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
+                                        Peso (kg)
+                                    </label>
                                     <input
                                         type="number"
                                         name="weight"
@@ -215,7 +225,9 @@ export default function Profile() {
 
                             <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                 <div className="space-y-2">
-                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">Estatura (cm)</label>
+                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
+                                        Estatura (cm)
+                                    </label>
                                     <input
                                         type="number"
                                         name="height"
@@ -226,8 +238,11 @@ export default function Profile() {
                                         placeholder="175"
                                     />
                                 </div>
+
                                 <div className="space-y-2">
-                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">Objetivo</label>
+                                    <label className="block text-zinc-500 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
+                                        Objetivo
+                                    </label>
                                     <select
                                         name="goal"
                                         value={profile.goal}
@@ -253,7 +268,7 @@ export default function Profile() {
                         </form>
                     </div>
 
-                    {/* HISTORIAL CRONOLÓGICO */}
+                    {/* HISTORIAL */}
                     <div className="space-y-6">
                         <h2 className="text-zinc-500 font-black uppercase text-[10px] tracking-[0.4em] ml-4 flex items-center gap-3">
                             <History size={14} className="text-indigo-500" /> Histórico de Registros
@@ -297,7 +312,7 @@ export default function Profile() {
                     </div>
                 </div>
             )}
-            {/* Modal de Confirmación de Borrado */}
+
             <ConfirmModal
                 isOpen={deleteModal.isOpen}
                 onClose={() => setDeleteModal({ isOpen: false, id: null })}

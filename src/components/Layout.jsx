@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
-import { LayoutDashboard, Dumbbell, Calendar, History, BrainCircuit, LogOut, User, Activity, Menu, X, Camera } from 'lucide-react'
+import {
+    LayoutDashboard,
+    Dumbbell,
+    Calendar,
+    History,
+    BrainCircuit,
+    LogOut,
+    User,
+    Activity,
+    Menu,
+    X,
+    Camera
+} from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
 export default function Layout() {
@@ -8,14 +20,15 @@ export default function Layout() {
     const location = useLocation()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+    // ✅ CAMBIO: agregamos "testId" a cada item (especialmente nav-exercises)
     const navItems = [
-        { path: '/dashboard', label: 'Centro de Mando', icon: LayoutDashboard },
-        { path: '/rutinas', label: 'Rutina semanal', icon: Calendar },
-        { path: '/biblioteca', label: 'Tutorial de ejercicios', icon: Dumbbell },
-        { path: '/historial', label: 'Registros', icon: History },
-        { path: '/progreso', label: 'Mis Progresos', icon: Camera },
-        { path: '/coach', label: 'IA Coach', icon: BrainCircuit },
-        { path: '/perfil', label: 'Mis biometrías', icon: User },
+        { path: '/dashboard', label: 'Centro de Mando', icon: LayoutDashboard, testId: 'nav-dashboard' },
+        { path: '/rutinas', label: 'Rutina semanal', icon: Calendar, testId: 'nav-routines' },
+        { path: '/biblioteca', label: 'Tutorial de ejercicios', icon: Dumbbell, testId: 'nav-exercises' }, // ✅ ESTE ES EL IMPORTANTE PARA RF-03
+        { path: '/historial', label: 'Registros', icon: History, testId: 'nav-history' },
+        { path: '/progreso', label: 'Mis Progresos', icon: Camera, testId: 'nav-progress' },
+        { path: '/coach', label: 'IA Coach', icon: BrainCircuit, testId: 'nav-ai-coach' },
+        { path: '/perfil', label: 'Mis biometrías', icon: User, testId: 'nav-profile' },
     ]
 
     return (
@@ -36,7 +49,9 @@ export default function Layout() {
                         <h1 className="text-xl lg:text-3xl font-black italic tracking-tighter text-white uppercase leading-none">
                             GYM<span className="text-indigo-500">AI</span> COACH
                         </h1>
-                        <p className="text-[8px] lg:text-[10px] text-zinc-500 font-mono tracking-[0.2em] uppercase mt-1 hidden lg:block">EL ENTRENAMIENTO DEL FUTURO</p>
+                        <p className="text-[8px] lg:text-[10px] text-zinc-500 font-mono tracking-[0.2em] uppercase mt-1 hidden lg:block">
+                            EL ENTRENAMIENTO DEL FUTURO
+                        </p>
                     </div>
                 </Link>
 
@@ -47,14 +62,24 @@ export default function Layout() {
                             <Link
                                 key={item.path}
                                 to={item.path}
+                                // ✅ CAMBIO: aquí agregamos el data-testid para Cypress
+                                data-testid={item.testId}
                                 className={`flex items-center gap-3 lg:gap-4 px-3 lg:px-5 py-3 lg:py-4 rounded-xl transition-all duration-500 group relative overflow-hidden ${isActive
-                                    ? 'bg-indigo-600/10 text-white border border-indigo-500/20 text-shadow-neon'
-                                    : 'text-zinc-500 hover:text-zinc-200 hover:bg-white/5'
+                                        ? 'bg-indigo-600/10 text-white border border-indigo-500/20 text-shadow-neon'
+                                        : 'text-zinc-500 hover:text-zinc-200 hover:bg-white/5'
                                     }`}
                             >
-                                {isActive && <div className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-[3px] bg-indigo-500 shadow-[0_0_15px_#6366f1]"></div>}
-                                <item.icon size={20} className={`transition-all duration-500 ${isActive ? 'text-indigo-400 scale-110' : 'group-hover:text-indigo-400'}`} />
-                                <span className={`text-xs lg:text-sm tracking-wide transition-all ${isActive ? 'font-black uppercase italic' : 'font-medium'}`}>{item.label}</span>
+                                {isActive && (
+                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-[3px] bg-indigo-500 shadow-[0_0_15px_#6366f1]"></div>
+                                )}
+                                <item.icon
+                                    size={20}
+                                    className={`transition-all duration-500 ${isActive ? 'text-indigo-400 scale-110' : 'group-hover:text-indigo-400'
+                                        }`}
+                                />
+                                <span className={`text-xs lg:text-sm tracking-wide transition-all ${isActive ? 'font-black uppercase italic' : 'font-medium'}`}>
+                                    {item.label}
+                                </span>
                             </Link>
                         )
                     })}
@@ -108,8 +133,11 @@ export default function Layout() {
                                     <Link
                                         key={item.path}
                                         to={item.path}
+                                        // ✅ CAMBIO: también agregamos data-testid en móvil
+                                        data-testid={item.testId}
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className={`flex items-center gap-3 px-4 py-4 rounded-xl transition-all ${isActive ? 'bg-indigo-600/10 text-indigo-400' : 'text-zinc-500'}`}
+                                        className={`flex items-center gap-3 px-4 py-4 rounded-xl transition-all ${isActive ? 'bg-indigo-600/10 text-indigo-400' : 'text-zinc-500'
+                                            }`}
                                     >
                                         <item.icon size={20} />
                                         <span className="font-bold uppercase text-xs tracking-widest">{item.label}</span>
@@ -118,7 +146,10 @@ export default function Layout() {
                             })}
                         </nav>
 
-                        <button onClick={signOut} className="flex items-center gap-3 text-red-400/70 p-4 font-black uppercase text-[10px] tracking-[0.2em]">
+                        <button
+                            onClick={signOut}
+                            className="flex items-center gap-3 text-red-400/70 p-4 font-black uppercase text-[10px] tracking-[0.2em]"
+                        >
                             <LogOut size={16} /> Salir del Sistema
                         </button>
                     </div>
