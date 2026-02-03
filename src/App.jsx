@@ -2,21 +2,24 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import Layout from './components/Layout'
 
-// --- IMPORTACIÓN DE PÁGINAS (Coincidiendo con tu carpeta) ---
+// --- PÁGINAS ---
 import Login from './pages/Login'
 import Register from './pages/Register'
+import ForgotPassword from './pages/ForgotPassword'
 import UpdatePassword from './pages/UpdatePassword'
+
 import Dashboard from './pages/Dashboard'
 import Routines from './pages/Routines'
 import Exercises from './pages/Exercises'
 import History from './pages/History'
-import ForgotPassword from './pages/ForgotPassword'
-
-// CORRECCIÓN FINAL: Usamos el nombre exacto de tu archivo
+import TrainingSelfies from './pages/TrainingSelfies'
 import AICoach from './pages/AICoach'
 import Profile from './pages/Profile'
 import WorkoutSession from './pages/WorkoutSession'
-import TrainingSelfies from './pages/TrainingSelfies'
+
+// ✅ NUEVO RF-06
+import Stats from './pages/Stats'
+
 import ProtectedRoute from './components/ProtectedRoute'
 
 export default function App() {
@@ -24,7 +27,8 @@ export default function App() {
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AuthProvider>
         <Routes>
-          {/* --- RUTAS PÚBLICAS --- */}
+
+          {/* ===== RUTAS PÚBLICAS ===== */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -33,7 +37,7 @@ export default function App() {
           {/* Redirección inicial */}
           <Route path="/" element={<Navigate to="/login" replace />} />
 
-          {/* --- RUTAS DEL SISTEMA (Protegidas) --- */}
+          {/* ===== RUTAS PROTEGIDAS ===== */}
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route path="/dashboard" element={<Dashboard />} />
@@ -41,6 +45,10 @@ export default function App() {
               <Route path="/biblioteca" element={<Exercises />} />
               <Route path="/historial" element={<History />} />
               <Route path="/progreso" element={<TrainingSelfies />} />
+
+              {/* ===== RF-06 ESTADÍSTICAS ===== */}
+              <Route path="/estadisticas" element={<Stats />} />
+
               <Route path="/coach" element={<AICoach />} />
               <Route path="/perfil" element={<Profile />} />
               <Route path="/entrenar/:routineId" element={<WorkoutSession />} />
@@ -48,8 +56,9 @@ export default function App() {
             </Route>
           </Route>
 
-          {/* Si la ruta no existe, ir al dashboard */}
+          {/* Ruta no encontrada */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
+
         </Routes>
       </AuthProvider>
     </BrowserRouter>
