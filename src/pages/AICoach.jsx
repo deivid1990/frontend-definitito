@@ -70,7 +70,6 @@ export default function AICoach() {
         try {
             const response = await api.post('/api/ai/chat', { messages: newMessages })
 
-            // Si la IA sugiere una rutina, la capturamos
             if (response?.routine) {
                 setGeneratedRoutine(response.routine)
             }
@@ -84,7 +83,7 @@ export default function AICoach() {
                 ...prev,
                 {
                     role: 'assistant',
-                    content: 'Lo siento, hubo un error al conectar con mis circuitos neuronales.'
+                    content: 'He tenido un pequeño problema de conexión con mis circuitos. ¿Podrías intentar enviarlo de nuevo? ⚡'
                 }
             ])
         } finally {
@@ -94,7 +93,6 @@ export default function AICoach() {
 
     // --- GENERACIÓN DE RUTINA ---
     const handleGenerate = async () => {
-        // Si ya tenemos una rutina capturada del chat, vamos directo al preview
         if (generatedRoutine) {
             setMode('preview')
             return
@@ -102,11 +100,12 @@ export default function AICoach() {
 
         setLoading(true)
         try {
+            // Un pequeño delay visual para que el usuario sepa que está trabajando
             const routine = await api.post('/api/ai/generar-rutina', options)
             setGeneratedRoutine(routine)
             setMode('preview')
         } catch (err) {
-            alert('Error al generar la rutina: ' + err.message)
+            alert('El sistema está un poco saturado diseñando rutinas épicas. Por favor, reintenta en unos segundos.')
         } finally {
             setLoading(false)
         }
@@ -152,7 +151,7 @@ export default function AICoach() {
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                             <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest">
-                                Neural Link Active
+                                Neural Link Active [V2.0]
                             </p>
                         </div>
                     </div>
@@ -165,8 +164,8 @@ export default function AICoach() {
                             data-testid="mode-chat"
                             onClick={() => setMode('chat')}
                             className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${mode === 'chat'
-                                    ? 'bg-indigo-600 text-white shadow-lg'
-                                    : 'text-zinc-500 hover:text-white'
+                                ? 'bg-indigo-600 text-white shadow-lg'
+                                : 'text-zinc-500 hover:text-white'
                                 }`}
                         >
                             Asistente
@@ -183,8 +182,8 @@ export default function AICoach() {
                                 }
                             }}
                             className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all relative ${mode === 'generate'
-                                    ? 'bg-indigo-600 text-white shadow-lg'
-                                    : 'text-zinc-500 hover:text-white'
+                                ? 'bg-indigo-600 text-white shadow-lg'
+                                : 'text-zinc-500 hover:text-white'
                                 }`}
                         >
                             {generatedRoutine && (
@@ -214,8 +213,8 @@ export default function AICoach() {
                                     <div
                                         data-testid={msg.role === 'user' ? 'user-bubble' : 'ai-bubble'}
                                         className={`max-w-[90%] sm:max-w-[80%] p-3 sm:p-4 rounded-2xl sm:rounded-3xl text-xs sm:text-sm leading-relaxed ${msg.role === 'user'
-                                                ? 'bg-indigo-600 text-white rounded-tr-none'
-                                                : 'bg-zinc-800/80 text-zinc-200 rounded-tl-none border border-zinc-700'
+                                            ? 'bg-indigo-600 text-white rounded-tr-none'
+                                            : 'bg-zinc-800/80 text-zinc-200 rounded-tl-none border border-zinc-700'
                                             }`}
                                     >
                                         {msg.content}
@@ -224,9 +223,10 @@ export default function AICoach() {
                             ))}
 
                             {loading && (
-                                <div className="flex justify-start">
-                                    <div className="bg-zinc-800/80 p-4 rounded-3xl rounded-tl-none border border-zinc-700">
+                                <div className="flex justify-start animate-pulse">
+                                    <div className="bg-zinc-800/80 p-4 rounded-3xl rounded-tl-none border border-zinc-700 flex items-center gap-3">
                                         <Loader2 className="animate-spin text-indigo-400" size={18} />
+                                        <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest">Analizando...</span>
                                     </div>
                                 </div>
                             )}
@@ -283,7 +283,7 @@ export default function AICoach() {
                             className="bg-white text-black px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-400 hover:text-white transition-all flex items-center gap-3 active:scale-95"
                         >
                             {loading ? <Loader2 className="animate-spin" /> : <ChevronRight size={20} />}
-                            {loading ? 'CALCULANDO...' : 'INICIAR DISEÑO'}
+                            {loading ? 'ESTABLECIENDO LINK NEURONAL...' : 'INICIAR DISEÑO'}
                         </button>
                     </div>
                 )}
